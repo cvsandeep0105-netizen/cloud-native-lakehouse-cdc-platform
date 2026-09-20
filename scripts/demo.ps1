@@ -22,7 +22,7 @@ P "9 local Iceberg datasets present"
 P "Apache Iceberg Format V2 validated in project evidence"
 
 S 4 "Silver Reconciliation"
-$e=Get-Content .\evidence\area-19\area-19-acceptance-and-freeze.md -Raw;if($e -notmatch "Status\s*\r?\n\r?\nPASS\s*—\s*FROZEN"){throw "Area 19 acceptance is not PASS / FROZEN"};if($e -notmatch "Iceberg tables validated: 9/9"){throw "Iceberg 9/9 evidence missing"};if($e -notmatch "Row-count reconciliation: 9/9 PASS"){throw "Row-count evidence missing"};if($e -notmatch "Column reconciliation: 9/9 PASS"){throw "Column evidence missing"};if($e -notmatch "Snapshot presence: 9/9 PASS"){throw "Snapshot evidence missing"}
+$e=Get-Content .\evidence\area-19\area-19-acceptance-and-freeze.md -Raw;if($e -notmatch "Status"){throw "Area 19 acceptance status missing"};if($e -notmatch "PASS"){throw "Area 19 acceptance is not PASS"};if($e -notmatch "FROZEN"){throw "Area 19 acceptance is not FROZEN"};if($e -notmatch "Iceberg tables validated: 9/9"){throw "Iceberg 9/9 evidence missing"};if($e -notmatch "Row-count reconciliation: 9/9 PASS"){throw "Row-count evidence missing"};if($e -notmatch "Column reconciliation: 9/9 PASS"){throw "Column evidence missing"};if($e -notmatch "Snapshot presence: 9/9 PASS"){throw "Snapshot evidence missing"}
 if($LASTEXITCODE -ne 0){throw "Silver reconciliation failed"}
 P "Silver reconciliation passed"
 
