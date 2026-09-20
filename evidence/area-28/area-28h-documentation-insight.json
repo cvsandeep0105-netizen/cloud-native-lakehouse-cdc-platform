@@ -1,0 +1,31 @@
+{
+  "analysis_type": "AI-assisted engineering documentation insight",
+  "source_evidence_files": [
+    "area-25-final-acceptance.md",
+    "area-26-final-acceptance.md",
+    "area-27-final-acceptance.md"
+  ],
+  "knowledge_items": [
+    {
+      "topic": "Data Quality",
+      "source": "Area 25 evidence",
+      "summary": "Deterministic data-quality rules validate source, raw, bronze, silver, and gold layers."
+    },
+    {
+      "topic": "Data Reconciliation",
+      "source": "Area 26 evidence",
+      "summary": "Cross-layer reconciliation validates counts, identities, metrics, lineage, and trust boundaries."
+    },
+    {
+      "topic": "Metadata and Lineage",
+      "source": "Area 27 evidence",
+      "summary": "Dataset, column, catalog, and lineage metadata connect source data through CDC and lakehouse layers to Gold products."
+    }
+  ],
+  "documentation_boundary": "Generated knowledge is advisory and must remain traceable to approved engineering evidence.",
+  "deterministic_precedence": true,
+  "human_review_required": true,
+  "autonomous_documentation_commit": false,
+  "production_mutation": "NONE",
+  "aws_ai_execution": "NOT CLAIMED"
+}

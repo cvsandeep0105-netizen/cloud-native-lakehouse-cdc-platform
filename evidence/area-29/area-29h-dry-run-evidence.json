@@ -1,0 +1,29 @@
+{
+  "dry_run": "full dependency-gated orchestration",
+  "stages": 9,
+  "successful_execution_order": [
+    "S01",
+    "S02",
+    "S03",
+    "S04",
+    "S05",
+    "S06",
+    "S07",
+    "S08",
+    "S09"
+  ],
+  "failure_injection_stage": "S03",
+  "blocked_downstream_stages": [
+    "S04",
+    "S05",
+    "S06",
+    "S07",
+    "S08",
+    "S09"
+  ],
+  "checkpoint_mutation": "NONE",
+  "production_data_modified": "NONE",
+  "postgresql_modified": "NONE",
+  "iceberg_modified": "NONE",
+  "aws_execution": "NOT CLAIMED"
+}

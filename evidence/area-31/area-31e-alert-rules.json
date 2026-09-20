@@ -1,0 +1,129 @@
+{
+  "area": "31-E",
+  "alert_rules_count": 16,
+  "rules": [
+    {
+      "rule_id": "ALERT-001",
+      "metric_id": "M01",
+      "condition": "success_rate < 1.0",
+      "severity": "HIGH",
+      "action": "investigate failed pipeline stages"
+    },
+    {
+      "rule_id": "ALERT-002",
+      "metric_id": "M03",
+      "condition": "failure_count > 0",
+      "severity": "HIGH",
+      "action": "classify failure and invoke recovery policy"
+    },
+    {
+      "rule_id": "ALERT-003",
+      "metric_id": "M05",
+      "condition": "captured_events == 0 when CDC expected",
+      "severity": "HIGH",
+      "action": "inspect CDC capture boundary"
+    },
+    {
+      "rule_id": "ALERT-004",
+      "metric_id": "M06",
+      "condition": "ordering_rejections > 0",
+      "severity": "CRITICAL",
+      "action": "block downstream CDC processing and investigate ordering"
+    },
+    {
+      "rule_id": "ALERT-005",
+      "metric_id": "M07",
+      "condition": "duplicate_events > 0",
+      "severity": "WARNING",
+      "action": "inspect deduplication behavior"
+    },
+    {
+      "rule_id": "ALERT-006",
+      "metric_id": "M08",
+      "condition": "capture_lag exceeds approved operating threshold",
+      "severity": "HIGH",
+      "action": "investigate CDC latency"
+    },
+    {
+      "rule_id": "ALERT-007",
+      "metric_id": "M11",
+      "condition": "checkpoint_commit_failures > 0",
+      "severity": "CRITICAL",
+      "action": "preserve checkpoint and invoke recovery"
+    },
+    {
+      "rule_id": "ALERT-008",
+      "metric_id": "M13",
+      "condition": "replay_filtered_events > 0",
+      "severity": "INFO",
+      "action": "record replay filtering for auditability"
+    },
+    {
+      "rule_id": "ALERT-009",
+      "metric_id": "M15",
+      "condition": "dq_rules_failed > 0",
+      "severity": "HIGH",
+      "action": "block downstream processing and investigate DQ failure"
+    },
+    {
+      "rule_id": "ALERT-010",
+      "metric_id": "M18",
+      "condition": "reconciliation_discrepancies > 0",
+      "severity": "CRITICAL",
+      "action": "block downstream products and investigate trust discrepancy"
+    },
+    {
+      "rule_id": "ALERT-011",
+      "metric_id": "M23",
+      "condition": "schema_compatibility_failures > 0",
+      "severity": "CRITICAL",
+      "action": "block deployment or processing and invoke schema review"
+    },
+    {
+      "rule_id": "ALERT-012",
+      "metric_id": "M26",
+      "condition": "metadata_validation_failures > 0",
+      "severity": "HIGH",
+      "action": "block affected downstream metadata-dependent stages"
+    },
+    {
+      "rule_id": "ALERT-013",
+      "metric_id": "M27",
+      "condition": "recovery_events > 0",
+      "severity": "WARNING",
+      "action": "record recovery event and verify successful completion"
+    },
+    {
+      "rule_id": "ALERT-014",
+      "metric_id": "M28",
+      "condition": "blocked_downstream_stages > 0",
+      "severity": "HIGH",
+      "action": "trace blocking upstream dependency"
+    },
+    {
+      "rule_id": "ALERT-015",
+      "metric_id": "M24",
+      "condition": "file_count_growth exceeds approved operating threshold",
+      "severity": "WARNING",
+      "action": "inspect small-file accumulation and storage layout"
+    },
+    {
+      "rule_id": "ALERT-016",
+      "metric_id": "M25",
+      "condition": "storage_growth exceeds approved operating threshold",
+      "severity": "WARNING",
+      "action": "inspect storage growth and cost drivers"
+    }
+  ],
+  "boundary": {
+    "threshold_policy": "Deterministic thresholds are configurable and must be approved before production use.",
+    "slo_boundary": "Final production SLO/SLA targets are deferred to Area 32.",
+    "critical_policy": "CRITICAL alerts block affected downstream processing until the failure is resolved or explicitly reviewed.",
+    "high_policy": "HIGH alerts require investigation and controlled recovery according to Areas 29-30.",
+    "warning_policy": "WARNING alerts require operational review but do not automatically mutate production state.",
+    "info_policy": "INFO events are retained for operational auditability.",
+    "autonomous_action": "DISABLED",
+    "production_mutation": "NONE",
+    "aws_execution": "NOT CLAIMED"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "area": "32-F",
+  "on_call_model": "deterministic_operational_on_call",
+  "procedures": [
+    {
+      "procedure_id": "ONCALL-01",
+      "severity": "CRITICAL",
+      "response": "acknowledge within 15 minutes",
+      "escalation": "immediate technical escalation",
+      "validation": "confirm containment and deterministic control state"
+    },
+    {
+      "procedure_id": "ONCALL-02",
+      "severity": "HIGH",
+      "response": "acknowledge and investigate promptly",
+      "escalation": "stage owner escalation",
+      "validation": "confirm recovery or controlled blocking"
+    },
+    {
+      "procedure_id": "ONCALL-03",
+      "severity": "WARNING",
+      "response": "review during operational window",
+      "escalation": "team review when recurring",
+      "validation": "confirm trend and corrective action"
+    },
+    {
+      "procedure_id": "ONCALL-04",
+      "severity": "INFO",
+      "response": "record for operational context",
+      "escalation": "none unless correlated with failure",
+      "validation": "retain audit evidence"
+    }
+  ],
+  "triage_steps": [
+    "1. Receive and correlate alert with run_id, stage_id, dataset, and failure_id.",
+    "2. Confirm alert severity and affected dependency.",
+    "3. Determine whether the condition is transient, retryable, blocking, or non-retryable.",
+    "4. Preserve the last committed checkpoint.",
+    "5. Follow the Area 30 recovery decision matrix.",
+    "6. Escalate when the defined response boundary is exceeded.",
+    "7. Validate DQ and reconciliation gates before resumption.",
+    "8. Confirm downstream dependency state.",
+    "9. Record incident, SLO impact, recovery action, and evidence.",
+    "10. Complete handoff or closure with explicit operational status."
+  ],
+  "handoff": {
+    "required_fields": [
+      "incident_id",
+      "run_id",
+      "stage_id",
+      "severity",
+      "current_state",
+      "checkpoint_position",
+      "last_action",
+      "next_action",
+      "owner",
+      "timestamp",
+      "evidence_reference"
+    ],
+    "handoff_rule": "No unresolved critical incident may be handed off without current state, checkpoint state, next action, and evidence reference.",
+    "closure_rule": "Closure requires validated recovery or an explicitly documented blocked state."
+  },
+  "ownership_model": "stage and incident ownership with explicit escalation",
+  "checkpoint_protection": true,
+  "dq_reconciliation_gate_required": true,
+  "human_review_required": true,
+  "autonomous_remediation": "DISABLED",
+  "production_mutation": "NONE",
+  "postgresql_modified": "NONE",
+  "iceberg_modified": "NONE",
+  "aws_execution": "NOT CLAIMED"
+}

@@ -1,0 +1,78 @@
+{
+  "area": "32-G",
+  "communication_model": "deterministic_incident_communication",
+  "severity_levels": [
+    {
+      "severity": "CRITICAL",
+      "initial_channel": "on-call engineer",
+      "escalation": "immediate technical escalation",
+      "update_cadence": "during active incident",
+      "closure": "human-confirmed"
+    },
+    {
+      "severity": "HIGH",
+      "initial_channel": "on-call engineer",
+      "escalation": "stage owner",
+      "update_cadence": "during active investigation",
+      "closure": "owner-confirmed"
+    },
+    {
+      "severity": "WARNING",
+      "initial_channel": "operations queue",
+      "escalation": "team review if recurring",
+      "update_cadence": "operational review",
+      "closure": "recorded"
+    },
+    {
+      "severity": "INFO",
+      "initial_channel": "operational log",
+      "escalation": "none unless correlated",
+      "update_cadence": "audit record",
+      "closure": "recorded"
+    }
+  ],
+  "handoff_required_fields": [
+    "incident_id",
+    "run_id",
+    "stage_id",
+    "severity",
+    "detected_at",
+    "current_state",
+    "checkpoint_position",
+    "failure_class",
+    "last_action",
+    "next_action",
+    "owner",
+    "escalation_status",
+    "slo_impact",
+    "evidence_reference"
+  ],
+  "incident_timeline": [
+    "detection",
+    "acknowledgement",
+    "classification",
+    "containment",
+    "recovery_start",
+    "recovery_validation",
+    "resume_or_block",
+    "closure"
+  ],
+  "slo_sla_communication": {
+    "breach": "record affected SLO/SLA and measurement evidence",
+    "rpo": "record checkpoint position and any committed-event loss",
+    "rto": "record detection, recovery-start, and recovery-completion timestamps"
+  },
+  "rules": {
+    "critical": "human escalation required",
+    "high": "stage-owner escalation required",
+    "warning": "operational review required when recurring",
+    "info": "audit record retained",
+    "downstream_blocking": "preserve dependency state until upstream validation passes",
+    "checkpoint": "never advance solely to close an incident",
+    "autonomous_action": "DISABLED"
+  },
+  "production_mutation": "NONE",
+  "postgresql_modified": "NONE",
+  "iceberg_modified": "NONE",
+  "aws_execution": "NOT CLAIMED"
+}

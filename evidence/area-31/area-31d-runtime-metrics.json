@@ -1,0 +1,60 @@
+{
+  "collector": "local_deterministic_observability_collector",
+  "collection_timestamp": "2026-09-17T14:07:22.970792+00:00",
+  "signals": {
+    "area25_dq_evidence": true,
+    "area26_reconciliation_evidence": true,
+    "area28_ai_evidence": true,
+    "area29_orchestration_evidence": true,
+    "area30_recovery_evidence": true
+  },
+  "metrics": [
+    {
+      "metric_id": "OBS-DQ-001",
+      "name": "DQ Evidence Availability",
+      "value": 1,
+      "status": "PASS"
+    },
+    {
+      "metric_id": "OBS-REC-001",
+      "name": "Reconciliation Evidence Availability",
+      "value": 1,
+      "status": "PASS"
+    },
+    {
+      "metric_id": "OBS-AI-001",
+      "name": "AI Operational Evidence Availability",
+      "value": 1,
+      "status": "PASS"
+    },
+    {
+      "metric_id": "OBS-ORCH-001",
+      "name": "Orchestration Evidence Availability",
+      "value": 1,
+      "status": "PASS"
+    },
+    {
+      "metric_id": "OBS-RECOVERY-001",
+      "name": "Recovery Evidence Availability",
+      "value": 1,
+      "status": "PASS"
+    },
+    {
+      "metric_id": "OBS-CTRL-001",
+      "name": "Deterministic Control Evidence",
+      "value": 1,
+      "status": "PASS"
+    },
+    {
+      "metric_id": "OBS-PROD-001",
+      "name": "Production Mutation During Collection",
+      "value": 0,
+      "status": "PASS"
+    }
+  ],
+  "collection_mode": "READ_ONLY",
+  "production_mutation": "NONE",
+  "postgresql_modified": "NONE",
+  "iceberg_modified": "NONE",
+  "aws_execution": "NOT CLAIMED"
+}

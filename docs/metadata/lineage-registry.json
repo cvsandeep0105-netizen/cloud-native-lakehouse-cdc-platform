@@ -1,0 +1,83 @@
+{
+  "lineage_version": "1.0",
+  "flow": [
+    {
+      "stage": "source",
+      "output": "Olist operational datasets",
+      "next": "PostgreSQL"
+    },
+    {
+      "stage": "postgresql",
+      "output": "project02 operational tables",
+      "next": "CDC"
+    },
+    {
+      "stage": "cdc",
+      "output": "ordered change events",
+      "next": "Raw"
+    },
+    {
+      "stage": "raw",
+      "output": "immutable Olist artifacts and CDC artifacts",
+      "next": "Bronze"
+    },
+    {
+      "stage": "bronze",
+      "output": "normalized Parquet datasets",
+      "next": "Silver"
+    },
+    {
+      "stage": "silver",
+      "output": "current-state Iceberg datasets",
+      "next": "Gold"
+    },
+    {
+      "stage": "gold",
+      "output": "business data products",
+      "next": "consumers"
+    }
+  ],
+  "gold_lineage": {
+    "order_performance": [
+      "silver.orders",
+      "silver.order_items"
+    ],
+    "customer_analytics": [
+      "silver.customers",
+      "silver.orders",
+      "silver.order_items"
+    ],
+    "product_performance": [
+      "silver.products",
+      "silver.order_items"
+    ],
+    "seller_performance": [
+      "silver.sellers",
+      "silver.order_items"
+    ],
+    "payment_analytics": [
+      "silver.order_payments"
+    ],
+    "review_analytics": [
+      "silver.order_reviews"
+    ]
+  },
+  "cdc_lineage": {
+    "source": "PostgreSQL logical changes",
+    "event_order": "source_position then event_id",
+    "deduplication": "deterministic event identity",
+    "checkpoint_boundary": "last successfully processed source position",
+    "late_events": "detected against authoritative source position"
+  },
+  "storage_lineage": {
+    "raw": "immutable source artifacts",
+    "bronze": "schema-normalized Parquet",
+    "silver": "CDC-aware current-state Iceberg",
+    "gold": "business-grain Iceberg products"
+  },
+  "catalog_boundary": {
+    "local": "Apache Iceberg Hadoop Catalog",
+    "production_target": "AWS Glue Data Catalog",
+    "aws_execution": "not claimed"
+  }
+}

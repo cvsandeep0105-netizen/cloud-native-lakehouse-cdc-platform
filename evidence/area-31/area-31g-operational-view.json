@@ -1,0 +1,36 @@
+{
+  "area": "31-G",
+  "view": "local_observability_operational_view",
+  "mode": "READ_ONLY",
+  "pipeline": {
+    "status": "OBSERVABLE",
+    "production_execution": "NOT CLAIMED"
+  },
+  "observability": {
+    "metrics_catalog_count": 28,
+    "runtime_metrics_collected": 7,
+    "alert_rules": 16,
+    "alert_scenarios_evaluated": 10
+  },
+  "operational_domains": {
+    "cdc": "MONITORED",
+    "checkpoint": "MONITORED",
+    "data_quality": "MONITORED",
+    "reconciliation": "MONITORED",
+    "schema": "MONITORED",
+    "recovery": "MONITORED",
+    "lakehouse": "MONITORED",
+    "metadata": "MONITORED"
+  },
+  "alert_summary": {
+    "critical": 4,
+    "notification_execution": "NOT EXECUTED",
+    "autonomous_remediation": "DISABLED"
+  },
+  "safety": {
+    "postgresql_modified": "NONE",
+    "iceberg_modified": "NONE",
+    "production_data_modified": "NONE",
+    "aws_execution": "NOT CLAIMED"
+  }
+}

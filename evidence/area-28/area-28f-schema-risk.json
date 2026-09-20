@@ -1,0 +1,41 @@
+{
+  "policy_source": "Area 23 schema evolution controls",
+  "validated_scenarios": 5,
+  "scenarios": [
+    {
+      "change": "add nullable column",
+      "class": "additive",
+      "risk": "controlled",
+      "production_action": "human review required"
+    },
+    {
+      "change": "change existing data type",
+      "class": "breaking",
+      "risk": "high impact",
+      "production_action": "formal migration gate required"
+    },
+    {
+      "change": "rename existing column",
+      "class": "breaking",
+      "risk": "high impact",
+      "production_action": "formal migration gate required"
+    },
+    {
+      "change": "remove existing column",
+      "class": "breaking",
+      "risk": "high impact",
+      "production_action": "formal migration gate required"
+    },
+    {
+      "change": "change CDC contract",
+      "class": "breaking",
+      "risk": "high impact",
+      "production_action": "formal migration gate required"
+    }
+  ],
+  "ai_role": "advisory interpretation of deterministic schema policy",
+  "deterministic_policy_authoritative": true,
+  "human_review_required": true,
+  "production_mutation": "NONE",
+  "aws_ai_execution": "NOT CLAIMED"
+}

@@ -1,0 +1,115 @@
+{
+  "schema_name": "project02_observability_event",
+  "schema_version": "1.0",
+  "field_count": 17,
+  "fields": [
+    {
+      "field": "event_id",
+      "type": "string",
+      "description": "Unique operational event identifier",
+      "requirement": "required"
+    },
+    {
+      "field": "run_id",
+      "type": "string",
+      "description": "Pipeline run correlation identifier",
+      "requirement": "required"
+    },
+    {
+      "field": "stage_id",
+      "type": "string",
+      "description": "Orchestration stage identifier",
+      "requirement": "required"
+    },
+    {
+      "field": "event_type",
+      "type": "string",
+      "description": "Operational event classification",
+      "requirement": "required"
+    },
+    {
+      "field": "timestamp",
+      "type": "datetime",
+      "description": "Event occurrence timestamp",
+      "requirement": "required"
+    },
+    {
+      "field": "dataset",
+      "type": "string/null",
+      "description": "Affected dataset when applicable",
+      "requirement": "optional"
+    },
+    {
+      "field": "source_position",
+      "type": "integer/null",
+      "description": "CDC source position when applicable",
+      "requirement": "optional"
+    },
+    {
+      "field": "checkpoint_position",
+      "type": "integer/null",
+      "description": "Authoritative checkpoint position",
+      "requirement": "optional"
+    },
+    {
+      "field": "status",
+      "type": "string",
+      "description": "Current event or stage status",
+      "requirement": "required"
+    },
+    {
+      "field": "severity",
+      "type": "string",
+      "description": "Operational severity",
+      "requirement": "required"
+    },
+    {
+      "field": "failure_id",
+      "type": "string/null",
+      "description": "Area 30 failure identifier when applicable",
+      "requirement": "optional"
+    },
+    {
+      "field": "recovery_action",
+      "type": "string/null",
+      "description": "Recovery action when applicable",
+      "requirement": "optional"
+    },
+    {
+      "field": "records_processed",
+      "type": "integer/null",
+      "description": "Records processed by the operation",
+      "requirement": "optional"
+    },
+    {
+      "field": "records_rejected",
+      "type": "integer/null",
+      "description": "Records rejected by the operation",
+      "requirement": "optional"
+    },
+    {
+      "field": "duration_ms",
+      "type": "number/null",
+      "description": "Operation duration in milliseconds",
+      "requirement": "optional"
+    },
+    {
+      "field": "message",
+      "type": "string",
+      "description": "Human-readable operational message",
+      "requirement": "required"
+    },
+    {
+      "field": "correlation_id",
+      "type": "string",
+      "description": "Cross-component correlation identifier",
+      "requirement": "required"
+    }
+  ],
+  "structured_logging": true,
+  "correlation_required": true,
+  "checkpoint_traceability": true,
+  "failure_recovery_traceability": true,
+  "production_mutation": "NONE",
+  "aws_execution": "NOT CLAIMED"
+}

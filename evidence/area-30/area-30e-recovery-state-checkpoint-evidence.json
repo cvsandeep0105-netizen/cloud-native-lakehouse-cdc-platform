@@ -1,0 +1,52 @@
+{
+  "states_defined": [
+    "RUNNING",
+    "FAILED",
+    "RETRYING",
+    "RECOVERING",
+    "SUCCEEDED",
+    "BLOCKED"
+  ],
+  "transitions_defined": [
+    [
+      "RUNNING",
+      "FAILED"
+    ],
+    [
+      "FAILED",
+      "RETRYING"
+    ],
+    [
+      "RETRYING",
+      "RECOVERING"
+    ],
+    [
+      "RECOVERING",
+      "SUCCEEDED"
+    ],
+    [
+      "FAILED",
+      "BLOCKED"
+    ],
+    [
+      "RUNNING",
+      "BLOCKED"
+    ]
+  ],
+  "initial_checkpoint": 120,
+  "checkpoint_after_failure": 120,
+  "recovery_start_position": 121,
+  "recovery_events_selected": [
+    121,
+    122,
+    123,
+    124
+  ],
+  "checkpoint_after_success": 124,
+  "checkpoint_preserved_on_failure": true,
+  "checkpoint_advances_only_after_success": true,
+  "production_data_modified": "NONE",
+  "postgresql_modified": "NONE",
+  "iceberg_modified": "NONE",
+  "aws_execution": "NOT CLAIMED"
+}

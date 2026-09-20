@@ -1,0 +1,262 @@
+{
+  "orders": {
+    "order_id": {
+      "role": "primary_key",
+      "business_definition": "Unique order identifier",
+      "nullable": false
+    },
+    "customer_id": {
+      "role": "foreign_key",
+      "business_definition": "Customer associated with the order",
+      "nullable": false
+    },
+    "order_status": {
+      "role": "business_attribute",
+      "business_definition": "Current lifecycle status of the order",
+      "nullable": false
+    },
+    "order_purchase_timestamp": {
+      "role": "event_timestamp",
+      "business_definition": "Timestamp when the order was placed",
+      "nullable": false
+    },
+    "order_delivered_customer_date": {
+      "role": "event_timestamp",
+      "business_definition": "Timestamp when the order was delivered to the customer",
+      "nullable": true
+    },
+    "order_estimated_delivery_date": {
+      "role": "business_timestamp",
+      "business_definition": "Estimated customer delivery date",
+      "nullable": false
+    }
+  },
+  "order_items": {
+    "order_id": {
+      "role": "foreign_key",
+      "business_definition": "Parent order identifier",
+      "nullable": false
+    },
+    "order_item_id": {
+      "role": "composite_key",
+      "business_definition": "Item sequence within an order",
+      "nullable": false
+    },
+    "product_id": {
+      "role": "foreign_key",
+      "business_definition": "Purchased product identifier",
+      "nullable": false
+    },
+    "seller_id": {
+      "role": "foreign_key",
+      "business_definition": "Seller responsible for the item",
+      "nullable": false
+    },
+    "price": {
+      "role": "measure",
+      "business_definition": "Item purchase price",
+      "nullable": false
+    },
+    "freight_value": {
+      "role": "measure",
+      "business_definition": "Freight value assigned to the item",
+      "nullable": false
+    }
+  },
+  "order_payments": {
+    "order_id": {
+      "role": "composite_key",
+      "business_definition": "Parent order identifier",
+      "nullable": false
+    },
+    "payment_sequential": {
+      "role": "composite_key",
+      "business_definition": "Payment sequence within an order",
+      "nullable": false
+    },
+    "payment_type": {
+      "role": "dimension",
+      "business_definition": "Payment method used for the transaction",
+      "nullable": false
+    },
+    "payment_installments": {
+      "role": "measure",
+      "business_definition": "Number of payment installments",
+      "nullable": false
+    },
+    "payment_value": {
+      "role": "measure",
+      "business_definition": "Payment transaction value",
+      "nullable": false
+    }
+  },
+  "order_reviews": {
+    "order_review_key": {
+      "role": "technical_primary_key",
+      "business_definition": "Stable technical identity for the operational review row",
+      "nullable": false
+    },
+    "review_id": {
+      "role": "business_identifier",
+      "business_definition": "Source review identifier; not the sole technical primary key",
+      "nullable": false
+    },
+    "order_id": {
+      "role": "foreign_key",
+      "business_definition": "Order associated with the review",
+      "nullable": false
+    },
+    "review_score": {
+      "role": "measure",
+      "business_definition": "Customer review score from 1 to 5",
+      "nullable": false
+    }
+  },
+  "gold_order_performance": {
+    "order_id": {
+      "role": "primary_key",
+      "business_definition": "One row per order",
+      "nullable": false
+    },
+    "order_item_count": {
+      "role": "derived_measure",
+      "business_definition": "Number of order items associated with the order",
+      "nullable": false
+    },
+    "order_gross_value": {
+      "role": "derived_measure",
+      "business_definition": "Sum of item prices for the order",
+      "nullable": false
+    },
+    "order_freight_value": {
+      "role": "derived_measure",
+      "business_definition": "Sum of item freight values for the order",
+      "nullable": false
+    },
+    "order_total_value": {
+      "role": "derived_measure",
+      "business_definition": "Order gross value plus freight value",
+      "nullable": false
+    },
+    "delivery_days": {
+      "role": "derived_measure",
+      "business_definition": "Elapsed days from purchase to customer delivery",
+      "nullable": true
+    },
+    "delivery_delay_days": {
+      "role": "derived_measure",
+      "business_definition": "Elapsed days between actual delivery and estimated delivery",
+      "nullable": true
+    }
+  },
+  "gold_customer_analytics": {
+    "customer_id": {
+      "role": "primary_key",
+      "business_definition": "One row per customer",
+      "nullable": false
+    },
+    "customer_order_count": {
+      "role": "derived_measure",
+      "business_definition": "Distinct orders associated with the customer",
+      "nullable": false
+    },
+    "customer_item_count": {
+      "role": "derived_measure",
+      "business_definition": "Total purchased item rows associated with the customer",
+      "nullable": false
+    },
+    "customer_total_value": {
+      "role": "derived_measure",
+      "business_definition": "Total order value attributed to the customer",
+      "nullable": false
+    },
+    "customer_average_order_value": {
+      "role": "derived_measure",
+      "business_definition": "Average order value for the customer",
+      "nullable": true
+    }
+  },
+  "gold_product_performance": {
+    "product_id": {
+      "role": "primary_key",
+      "business_definition": "One row per product",
+      "nullable": false
+    },
+    "order_count": {
+      "role": "derived_measure",
+      "business_definition": "Distinct orders containing the product",
+      "nullable": false
+    },
+    "item_count": {
+      "role": "derived_measure",
+      "business_definition": "Number of purchased product item rows",
+      "nullable": false
+    },
+    "units_value": {
+      "role": "derived_measure",
+      "business_definition": "Sum of product item prices",
+      "nullable": false
+    }
+  },
+  "gold_seller_performance": {
+    "seller_id": {
+      "role": "primary_key",
+      "business_definition": "One row per seller",
+      "nullable": false
+    },
+    "order_count": {
+      "role": "derived_measure",
+      "business_definition": "Distinct orders containing seller items",
+      "nullable": false
+    },
+    "item_count": {
+      "role": "derived_measure",
+      "business_definition": "Number of seller item rows",
+      "nullable": false
+    },
+    "units_value": {
+      "role": "derived_measure",
+      "business_definition": "Sum of seller item prices",
+      "nullable": false
+    }
+  },
+  "gold_payment_analytics": {
+    "order_id": {
+      "role": "composite_key",
+      "business_definition": "Parent order identifier",
+      "nullable": false
+    },
+    "payment_sequential": {
+      "role": "composite_key",
+      "business_definition": "Payment sequence within the order",
+      "nullable": false
+    },
+    "payment_value": {
+      "role": "measure",
+      "business_definition": "Payment transaction value",
+      "nullable": false
+    }
+  },
+  "gold_review_analytics": {
+    "order_review_key": {
+      "role": "primary_key",
+      "business_definition": "Stable technical review identity",
+      "nullable": false
+    },
+    "review_id": {
+      "role": "business_identifier",
+      "business_definition": "Source review identifier",
+      "nullable": false
+    },
+    "order_id": {
+      "role": "foreign_key",
+      "business_definition": "Order associated with the review",
+      "nullable": false
+    },
+    "review_score": {
+      "role": "measure",
+      "business_definition": "Customer review score from 1 to 5",
+      "nullable": false
+    }
+  }
+}

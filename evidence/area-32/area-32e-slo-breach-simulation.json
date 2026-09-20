@@ -1,0 +1,40 @@
+{
+  "area": "32-E",
+  "evaluation_mode": "CONTROLLED_SLO_BREACH_SIMULATION",
+  "measurement_definitions": 12,
+  "scenarios_evaluated": 10,
+  "slo_met_cases": 3,
+  "breach_cases": 6,
+  "not_measured_cases": 1,
+  "rpo_preserved": true,
+  "rpo_breach_case_evaluated": true,
+  "rto_met_case_evaluated": true,
+  "rto_breach_case_evaluated": true,
+  "error_budget_examples": {
+    "pipeline_availability": {
+      "target_percent": 99.0,
+      "observed_percent": 97.0,
+      "budget_consumed_percent": 2.0,
+      "status": "BREACH"
+    },
+    "cdc_latency": {
+      "target_percent": 99.0,
+      "observed_percent": 94.0,
+      "budget_consumed_percent": 5.0,
+      "status": "BREACH"
+    },
+    "recovery_completion": {
+      "target_percent": 95.0,
+      "observed_percent": 95.0,
+      "budget_consumed_percent": 5.0,
+      "status": "MEETS"
+    }
+  },
+  "downstream_blocking_on_critical_failure": true,
+  "runbook_linkage": "Area 32-D",
+  "incident_escalation": "Area 32-D",
+  "production_mutation": "NONE",
+  "postgresql_modified": "NONE",
+  "iceberg_modified": "NONE",
+  "aws_execution": "NOT CLAIMED"
+}

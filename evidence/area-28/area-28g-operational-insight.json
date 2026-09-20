@@ -1,0 +1,49 @@
+{
+  "analysis_type": "AI-assisted pipeline operational insight",
+  "validated_scenarios": 4,
+  "results": [
+    {
+      "failure_id": "PIPELINE-001",
+      "component": "incremental_processor",
+      "failure": "checkpoint commit failed",
+      "ai_finding": "Advisory operational interpretation of the supplied deterministic failure evidence.",
+      "deterministic_control": "checkpoint remains unchanged",
+      "suggested_investigation": "inspect checkpoint-store error and safely retry from the last committed checkpoint",
+      "human_review_required": true,
+      "autonomous_recovery": false
+    },
+    {
+      "failure_id": "PIPELINE-002",
+      "component": "cdc_processor",
+      "failure": "late CDC event detected",
+      "ai_finding": "Advisory operational interpretation of the supplied deterministic failure evidence.",
+      "deterministic_control": "late event rejected or quarantined",
+      "suggested_investigation": "compare event source position with authoritative checkpoint and determine replay/backfill scope",
+      "human_review_required": true,
+      "autonomous_recovery": false
+    },
+    {
+      "failure_id": "PIPELINE-003",
+      "component": "schema_validator",
+      "failure": "schema compatibility failure",
+      "ai_finding": "Advisory operational interpretation of the supplied deterministic failure evidence.",
+      "deterministic_control": "pipeline change rejected",
+      "suggested_investigation": "compare incoming schema with the approved schema-evolution contract",
+      "human_review_required": true,
+      "autonomous_recovery": false
+    },
+    {
+      "failure_id": "PIPELINE-004",
+      "component": "data_quality",
+      "failure": "deterministic DQ rule failed",
+      "ai_finding": "Advisory operational interpretation of the supplied deterministic failure evidence.",
+      "deterministic_control": "DQ result remains authoritative",
+      "suggested_investigation": "trace the failed rule through source, transformation, and downstream lineage",
+      "human_review_required": true,
+      "autonomous_recovery": false
+    }
+  ],
+  "deterministic_controls_authoritative": true,
+  "production_mutation": "NONE",
+  "aws_ai_execution": "NOT CLAIMED"
+}

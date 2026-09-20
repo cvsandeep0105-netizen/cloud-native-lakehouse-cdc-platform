@@ -1,0 +1,52 @@
+{
+  "lineage_registry": "Area 27 technical lineage registry",
+  "validated_scenarios": 4,
+  "results": [
+    {
+      "source_dataset": "silver.orders",
+      "issue": "row_count discrepancy",
+      "potential_downstream_products": [
+        "customer_analytics",
+        "order_performance"
+      ],
+      "analysis_type": "advisory lineage impact analysis",
+      "human_review_required": true,
+      "deterministic_lineage_authoritative": true
+    },
+    {
+      "source_dataset": "silver.order_items",
+      "issue": "order item metric discrepancy",
+      "potential_downstream_products": [
+        "customer_analytics",
+        "order_performance",
+        "product_performance",
+        "seller_performance"
+      ],
+      "analysis_type": "advisory lineage impact analysis",
+      "human_review_required": true,
+      "deterministic_lineage_authoritative": true
+    },
+    {
+      "source_dataset": "silver.order_payments",
+      "issue": "payment identity discrepancy",
+      "potential_downstream_products": [
+        "payment_analytics"
+      ],
+      "analysis_type": "advisory lineage impact analysis",
+      "human_review_required": true,
+      "deterministic_lineage_authoritative": true
+    },
+    {
+      "source_dataset": "silver.order_reviews",
+      "issue": "review identity discrepancy",
+      "potential_downstream_products": [
+        "review_analytics"
+      ],
+      "analysis_type": "advisory lineage impact analysis",
+      "human_review_required": true,
+      "deterministic_lineage_authoritative": true
+    }
+  ],
+  "production_mutation": "NONE",
+  "aws_ai_execution": "NOT CLAIMED"
+}

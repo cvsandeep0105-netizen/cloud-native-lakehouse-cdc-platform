@@ -1,0 +1,12 @@
+{
+  "generated_at": "2026-09-20T08:12:42.495898+00:00",
+  "account": "326130805409",
+  "region": "ap-south-1",
+  "bucket": "project02-lakehouse-cdc-dev-data-lake",
+  "catalog_database": "project02-lakehouse-cdc-dev_catalog",
+  "athena_workgroup": "project02-lakehouse-cdc-dev-athena",
+  "stages": {
+    "39-G": true,
+    "39-H": true
+  }
+}

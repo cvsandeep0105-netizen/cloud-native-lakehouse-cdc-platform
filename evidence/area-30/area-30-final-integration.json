@@ -1,0 +1,28 @@
+{
+  "subareas_validated": 8,
+  "subareas": {
+    "30-A": "PASS",
+    "30-B": "PASS",
+    "30-C": "PASS",
+    "30-D": "PASS",
+    "30-E": "PASS",
+    "30-F": "PASS",
+    "30-G": "PASS",
+    "30-H": "PASS"
+  },
+  "failure_taxonomy_entries": 14,
+  "recovery_decision_entries": 14,
+  "failure_audit_records": 3,
+  "checkpoint_before_failure": 120,
+  "checkpoint_after_failure": 120,
+  "final_recovery_checkpoint": 124,
+  "post_recovery_replay_events": 0,
+  "checkpoint_advance_on_failure": false,
+  "checkpoint_advance_on_success": true,
+  "deterministic_controls_authoritative": true,
+  "human_review_boundary": true,
+  "production_data_modified": "NONE",
+  "postgresql_modified": "NONE",
+  "iceberg_modified": "NONE",
+  "aws_execution": "NOT CLAIMED"
+}

@@ -1,0 +1,129 @@
+{
+  "framework_name": "Project 02 Operational Runbook Framework",
+  "version": "1.0",
+  "required_fields": [
+    "runbook_id",
+    "title",
+    "purpose",
+    "scope",
+    "severity",
+    "trigger",
+    "pre_checks",
+    "detection",
+    "classification",
+    "containment",
+    "checkpoint_protection",
+    "recovery_action",
+    "validation",
+    "resume_condition",
+    "escalation",
+    "evidence_required",
+    "closure_criteria",
+    "owner",
+    "last_reviewed"
+  ],
+  "lifecycle": [
+    "DETECT",
+    "CLASSIFY",
+    "CONTAIN",
+    "PRESERVE",
+    "RECOVER",
+    "VALIDATE",
+    "RESUME",
+    "RECORD",
+    "ESCALATE",
+    "CLOSE"
+  ],
+  "severity_levels": [
+    "INFO",
+    "WARNING",
+    "HIGH",
+    "CRITICAL"
+  ],
+  "runbook_types": [
+    {
+      "runbook_id": "RB-001",
+      "title": "Pipeline Failure",
+      "severity": "HIGH",
+      "trigger": "pipeline failure alert"
+    },
+    {
+      "runbook_id": "RB-002",
+      "title": "CDC Capture Failure",
+      "severity": "CRITICAL",
+      "trigger": "CDC capture failure or capture-lag breach"
+    },
+    {
+      "runbook_id": "RB-003",
+      "title": "CDC Ordering Failure",
+      "severity": "CRITICAL",
+      "trigger": "CDC ordering rejection"
+    },
+    {
+      "runbook_id": "RB-004",
+      "title": "Checkpoint Commit Failure",
+      "severity": "CRITICAL",
+      "trigger": "checkpoint commit failure"
+    },
+    {
+      "runbook_id": "RB-005",
+      "title": "Data Quality Failure",
+      "severity": "HIGH",
+      "trigger": "blocking DQ rule failure"
+    },
+    {
+      "runbook_id": "RB-006",
+      "title": "Reconciliation Failure",
+      "severity": "CRITICAL",
+      "trigger": "blocking reconciliation discrepancy"
+    },
+    {
+      "runbook_id": "RB-007",
+      "title": "Schema Compatibility Failure",
+      "severity": "CRITICAL",
+      "trigger": "schema compatibility failure"
+    },
+    {
+      "runbook_id": "RB-008",
+      "title": "Gold Product Failure",
+      "severity": "HIGH",
+      "trigger": "Gold processing or freshness failure"
+    },
+    {
+      "runbook_id": "RB-009",
+      "title": "Recovery Procedure",
+      "severity": "HIGH",
+      "trigger": "retryable operational failure"
+    },
+    {
+      "runbook_id": "RB-010",
+      "title": "Data Integrity Incident",
+      "severity": "CRITICAL",
+      "trigger": "data corruption or integrity violation"
+    }
+  ],
+  "mandatory_controls": {
+    "checkpoint_protection": true,
+    "deterministic_dq_authority": true,
+    "deterministic_reconciliation_authority": true,
+    "schema_gate_authority": true,
+    "dependency_blocking": true,
+    "human_review_for_critical_incidents": true,
+    "autonomous_production_remediation": false
+  },
+  "evidence_required": [
+    "alert_event",
+    "run_id",
+    "stage_id",
+    "failure_or_incident_id",
+    "checkpoint_before",
+    "checkpoint_after",
+    "recovery_action",
+    "validation_result",
+    "closure_status"
+  ],
+  "production_mutation": "NONE",
+  "postgresql_modified": "NONE",
+  "iceberg_modified": "NONE",
+  "aws_execution": "NOT CLAIMED"
+}

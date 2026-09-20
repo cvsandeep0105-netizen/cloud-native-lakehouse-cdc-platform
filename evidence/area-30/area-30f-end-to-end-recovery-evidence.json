@@ -1,0 +1,46 @@
+{
+  "orchestration_stages": [
+    "S01_source_readiness",
+    "S02_initial_snapshot",
+    "S03_cdc_capture",
+    "S04_incremental_processing",
+    "S05_silver_processing",
+    "S06_data_quality",
+    "S07_reconciliation",
+    "S08_gold_products",
+    "S09_metadata_lineage_validation"
+  ],
+  "failed_stage": "S04_incremental_processing",
+  "checkpoint_before_failure": 120,
+  "checkpoint_after_failure": 120,
+  "blocked_downstream_stages": [
+    "S05_silver_processing",
+    "S06_data_quality",
+    "S07_reconciliation",
+    "S08_gold_products",
+    "S09_metadata_lineage_validation"
+  ],
+  "restart_events": [
+    121,
+    122,
+    123,
+    124
+  ],
+  "recovered_stages": [
+    "S04_incremental_processing",
+    "S05_silver_processing",
+    "S06_data_quality",
+    "S07_reconciliation",
+    "S08_gold_products",
+    "S09_metadata_lineage_validation"
+  ],
+  "final_checkpoint": 124,
+  "post_success_replay_events": [],
+  "checkpoint_advance_on_failure": false,
+  "checkpoint_advance_on_success": true,
+  "downstream_blocking": true,
+  "production_data_modified": "NONE",
+  "postgresql_modified": "NONE",
+  "iceberg_modified": "NONE",
+  "aws_execution": "NOT CLAIMED"
+}

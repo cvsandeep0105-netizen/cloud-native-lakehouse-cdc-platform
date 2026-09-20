@@ -1,0 +1,21 @@
+﻿{
+  "area": "35",
+  "status": "PASS",
+  "frozen": true,
+  "subareas": {
+    "35-A": "PASS",
+    "35-B": "PASS",
+    "35-C": "PASS",
+    "35-D": "PASS",
+    "35-E": "PASS",
+    "35-F": "PASS",
+    "35-G": "PASS",
+    "35-H": "PASS",
+    "35-I": "PASS"
+  },
+  "terraform_validation": "PASS",
+  "terraform_apply": "NOT_EXECUTED",
+  "aws_resources_created": "NONE",
+  "aws_execution_claimed": false,
+  "production_infrastructure_modified": false
+}

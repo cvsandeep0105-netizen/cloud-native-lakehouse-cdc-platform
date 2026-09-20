@@ -1,0 +1,9 @@
+{
+  "matrix_entries": 14,
+  "checkpoint_advance_during_failure": false,
+  "recovery_precedence_defined": true,
+  "deterministic_controls_authoritative": true,
+  "human_review_boundary": true,
+  "production_data_modified": "NONE",
+  "aws_execution": "NOT CLAIMED"
+}

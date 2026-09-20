@@ -1,0 +1,13 @@
+{
+  "area": "34-C",
+  "status": "PASS",
+  "lifecycle_defined": "PASS",
+  "raw_retention": "PASS",
+  "bronze_retention": "PASS",
+  "silver_retention": "PASS",
+  "gold_retention": "PASS",
+  "archive_control": "PASS",
+  "deletion_governance": "PASS",
+  "approval_required": "PASS",
+  "production_data_modified": "NONE"
+}

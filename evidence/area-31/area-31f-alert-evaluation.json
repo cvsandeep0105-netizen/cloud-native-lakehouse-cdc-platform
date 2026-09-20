@@ -1,0 +1,106 @@
+{
+  "area": "31-F",
+  "evaluation_mode": "CONTROLLED_SIMULATION",
+  "rules_available": 16,
+  "scenarios_evaluated": 10,
+  "critical_alerts": 4,
+  "routing_destinations": [
+    "cdc-operations",
+    "checkpoint-recovery",
+    "data-engineering",
+    "data-quality",
+    "metadata-governance",
+    "pipeline-operations",
+    "reconciliation",
+    "recovery-operations",
+    "schema-governance"
+  ],
+  "scenarios": [
+    {
+      "scenario_id": "S01",
+      "metric_id": "M03",
+      "observed": 1,
+      "severity": "HIGH",
+      "route": "pipeline-operations",
+      "blocking": false
+    },
+    {
+      "scenario_id": "S02",
+      "metric_id": "M06",
+      "observed": 2,
+      "severity": "CRITICAL",
+      "route": "cdc-operations",
+      "blocking": true
+    },
+    {
+      "scenario_id": "S03",
+      "metric_id": "M07",
+      "observed": 3,
+      "severity": "WARNING",
+      "route": "data-engineering",
+      "blocking": false
+    },
+    {
+      "scenario_id": "S04",
+      "metric_id": "M11",
+      "observed": 1,
+      "severity": "CRITICAL",
+      "route": "checkpoint-recovery",
+      "blocking": true
+    },
+    {
+      "scenario_id": "S05",
+      "metric_id": "M15",
+      "observed": 1,
+      "severity": "HIGH",
+      "route": "data-quality",
+      "blocking": true
+    },
+    {
+      "scenario_id": "S06",
+      "metric_id": "M18",
+      "observed": 1,
+      "severity": "CRITICAL",
+      "route": "reconciliation",
+      "blocking": true
+    },
+    {
+      "scenario_id": "S07",
+      "metric_id": "M23",
+      "observed": 1,
+      "severity": "CRITICAL",
+      "route": "schema-governance",
+      "blocking": true
+    },
+    {
+      "scenario_id": "S08",
+      "metric_id": "M26",
+      "observed": 1,
+      "severity": "HIGH",
+      "route": "metadata-governance",
+      "blocking": true
+    },
+    {
+      "scenario_id": "S09",
+      "metric_id": "M27",
+      "observed": 1,
+      "severity": "WARNING",
+      "route": "recovery-operations",
+      "blocking": false
+    },
+    {
+      "scenario_id": "S10",
+      "metric_id": "M28",
+      "observed": 2,
+      "severity": "HIGH",
+      "route": "pipeline-operations",
+      "blocking": true
+    }
+  ],
+  "notification_execution": "NOT EXECUTED",
+  "autonomous_remediation": "DISABLED",
+  "production_mutation": "NONE",
+  "postgresql_modified": "NONE",
+  "iceberg_modified": "NONE",
+  "aws_execution": "NOT CLAIMED"
+}

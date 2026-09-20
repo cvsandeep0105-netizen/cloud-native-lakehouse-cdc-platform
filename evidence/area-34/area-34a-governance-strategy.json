@@ -1,0 +1,14 @@
+{
+  "area": "34-A",
+  "status": "PASS",
+  "ownership": "PASS",
+  "stewardship": "PASS",
+  "access_governance": "PASS",
+  "quality_governance": "PASS",
+  "metadata_governance": "PASS",
+  "lineage_governance": "PASS",
+  "retention_governance": "PASS",
+  "privacy_governance": "PASS",
+  "auditability": "PASS",
+  "formal_certification": "NOT CLAIMED"
+}

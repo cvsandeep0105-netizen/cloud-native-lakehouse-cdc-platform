@@ -1,0 +1,226 @@
+﻿[
+    {
+        "Area":  "area-02",
+        "Status":  "COMPLETED / FROZEN",
+        "EvidenceFiles":  4,
+        "AcceptanceEvidence":  0,
+        "Evidence":  ""
+    },
+    {
+        "Area":  "area-06",
+        "Status":  "COMPLETED / FROZEN",
+        "EvidenceFiles":  1,
+        "AcceptanceEvidence":  0,
+        "Evidence":  ""
+    },
+    {
+        "Area":  "area-07",
+        "Status":  "COMPLETED / FROZEN",
+        "EvidenceFiles":  1,
+        "AcceptanceEvidence":  0,
+        "Evidence":  ""
+    },
+    {
+        "Area":  "area-11",
+        "Status":  "COMPLETED / FROZEN",
+        "EvidenceFiles":  2,
+        "AcceptanceEvidence":  1,
+        "Evidence":  "C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-11\\area-11-acceptance.md"
+    },
+    {
+        "Area":  "area-12",
+        "Status":  "COMPLETED / FROZEN",
+        "EvidenceFiles":  3,
+        "AcceptanceEvidence":  1,
+        "Evidence":  "C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-12\\area-12-acceptance.md"
+    },
+    {
+        "Area":  "area-13",
+        "Status":  "COMPLETED / FROZEN",
+        "EvidenceFiles":  5,
+        "AcceptanceEvidence":  1,
+        "Evidence":  "C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-13\\area-13-acceptance.md"
+    },
+    {
+        "Area":  "area-14",
+        "Status":  "COMPLETED / FROZEN",
+        "EvidenceFiles":  4,
+        "AcceptanceEvidence":  1,
+        "Evidence":  "C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-14\\area-14-acceptance.md"
+    },
+    {
+        "Area":  "area-15",
+        "Status":  "COMPLETED / FROZEN",
+        "EvidenceFiles":  5,
+        "AcceptanceEvidence":  1,
+        "Evidence":  "C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-15\\area-15-acceptance.md"
+    },
+    {
+        "Area":  "area-16",
+        "Status":  "COMPLETED / FROZEN",
+        "EvidenceFiles":  4,
+        "AcceptanceEvidence":  1,
+        "Evidence":  "C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-16\\area-16-acceptance.md"
+    },
+    {
+        "Area":  "area-17",
+        "Status":  "COMPLETED / FROZEN",
+        "EvidenceFiles":  5,
+        "AcceptanceEvidence":  1,
+        "Evidence":  "C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-17\\area-17-acceptance.md"
+    },
+    {
+        "Area":  "area-18",
+        "Status":  "COMPLETED / FROZEN",
+        "EvidenceFiles":  3,
+        "AcceptanceEvidence":  1,
+        "Evidence":  "C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-18\\area-18-acceptance.md"
+    },
+    {
+        "Area":  "area-19",
+        "Status":  "COMPLETED / FROZEN",
+        "EvidenceFiles":  3,
+        "AcceptanceEvidence":  2,
+        "Evidence":  "C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-19\\area-19-acceptance-and-freeze.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-19\\iceberg\\area-19d-acceptance.md"
+    },
+    {
+        "Area":  "area-20",
+        "Status":  "COMPLETED / FROZEN",
+        "EvidenceFiles":  2,
+        "AcceptanceEvidence":  1,
+        "Evidence":  "C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-20\\area-20-acceptance-and-freeze.md"
+    },
+    {
+        "Area":  "area-21",
+        "Status":  "COMPLETED / FROZEN",
+        "EvidenceFiles":  6,
+        "AcceptanceEvidence":  2,
+        "Evidence":  "C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-21\\area-21-acceptance-and-freeze.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-21\\silver\\area-21-final-acceptance.md"
+    },
+    {
+        "Area":  "area-22",
+        "Status":  "COMPLETED / FROZEN",
+        "EvidenceFiles":  5,
+        "AcceptanceEvidence":  2,
+        "Evidence":  "C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-22\\area-22-acceptance-and-freeze.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-22\\incremental\\area-22-final-acceptance.md"
+    },
+    {
+        "Area":  "area-23",
+        "Status":  "COMPLETED / FROZEN",
+        "EvidenceFiles":  2,
+        "AcceptanceEvidence":  1,
+        "Evidence":  "C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-23\\schema-evolution\\area-23-final-acceptance.md"
+    },
+    {
+        "Area":  "area-24",
+        "Status":  "COMPLETED / FROZEN",
+        "EvidenceFiles":  2,
+        "AcceptanceEvidence":  1,
+        "Evidence":  "C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-24\\gold\\area-24-final-acceptance.md"
+    },
+    {
+        "Area":  "area-25",
+        "Status":  "COMPLETED / FROZEN",
+        "EvidenceFiles":  5,
+        "AcceptanceEvidence":  5,
+        "Evidence":  "C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-25\\area-25-acceptance-and-freeze.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-25\\data-quality\\area-25-final-acceptance.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-25\\data-quality\\area-25a-acceptance.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-25\\data-quality\\area-25b-acceptance.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-25\\data-quality\\area-25c-acceptance.md"
+    },
+    {
+        "Area":  "area-26",
+        "Status":  "COMPLETED / FROZEN",
+        "EvidenceFiles":  3,
+        "AcceptanceEvidence":  3,
+        "Evidence":  "C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-26\\area-26-acceptance-and-freeze.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-26\\reconciliation\\area-26-final-acceptance.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-26\\reconciliation\\area-26a-acceptance.md"
+    },
+    {
+        "Area":  "area-27",
+        "Status":  "COMPLETED / FROZEN",
+        "EvidenceFiles":  2,
+        "AcceptanceEvidence":  2,
+        "Evidence":  "C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-27\\area-27-acceptance-and-freeze.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-27\\metadata\\area-27-final-acceptance.md"
+    },
+    {
+        "Area":  "area-28",
+        "Status":  "COMPLETED / FROZEN",
+        "EvidenceFiles":  9,
+        "AcceptanceEvidence":  4,
+        "Evidence":  "C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-28\\area-28-acceptance-and-freeze.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-28\\area-28-final-integration.json | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-28\\area-28b-acceptance.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-28\\area-28c-acceptance.md"
+    },
+    {
+        "Area":  "area-29",
+        "Status":  "COMPLETED / FROZEN",
+        "EvidenceFiles":  10,
+        "AcceptanceEvidence":  7,
+        "Evidence":  "C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-29\\area-29-acceptance-and-freeze.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-29\\area-29-final-acceptance.json | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-29\\area-29a-acceptance.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-29\\area-29b-acceptance.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-29\\area-29c-acceptance.json | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-29\\area-29d-acceptance.json | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-29\\area-29e-acceptance.json"
+    },
+    {
+        "Area":  "area-30",
+        "Status":  "COMPLETED / FROZEN",
+        "EvidenceFiles":  15,
+        "AcceptanceEvidence":  10,
+        "Evidence":  "C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-30\\area-30-acceptance-and-freeze.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-30\\area-30-final-integration.json | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-30\\area-30a-acceptance.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-30\\area-30b-acceptance.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-30\\area-30c-acceptance.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-30\\area-30d-acceptance.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-30\\area-30e-acceptance.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-30\\area-30f-acceptance.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-30\\area-30g-acceptance.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-30\\area-30h-acceptance.md"
+    },
+    {
+        "Area":  "area-31",
+        "Status":  "COMPLETED / FROZEN",
+        "EvidenceFiles":  17,
+        "AcceptanceEvidence":  10,
+        "Evidence":  "C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-31\\area-31-acceptance-and-freeze.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-31\\area-31-final-integration.json | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-31\\area-31a-acceptance.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-31\\area-31b-acceptance.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-31\\area-31c-acceptance.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-31\\area-31d-acceptance.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-31\\area-31e-acceptance.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-31\\area-31f-acceptance.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-31\\area-31g-acceptance.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-31\\area-31h-acceptance.md"
+    },
+    {
+        "Area":  "area-32",
+        "Status":  "COMPLETED / FROZEN",
+        "EvidenceFiles":  16,
+        "AcceptanceEvidence":  10,
+        "Evidence":  "C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-32\\area-32-acceptance-and-freeze.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-32\\area-32-final-integration.json | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-32\\area-32a-acceptance.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-32\\area-32b-acceptance.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-32\\area-32c-acceptance.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-32\\area-32d-acceptance.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-32\\area-32e-acceptance.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-32\\area-32f-acceptance.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-32\\area-32g-acceptance.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-32\\area-32h-acceptance.md"
+    },
+    {
+        "Area":  "area-33",
+        "Status":  "COMPLETED / FROZEN",
+        "EvidenceFiles":  18,
+        "AcceptanceEvidence":  10,
+        "Evidence":  "C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-33\\area-33-acceptance-and-freeze.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-33\\area-33-final-integration.json | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-33\\area-33a-acceptance.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-33\\area-33b-acceptance.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-33\\area-33c-acceptance.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-33\\area-33d-acceptance.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-33\\area-33e-acceptance.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-33\\area-33f-acceptance.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-33\\area-33g-acceptance.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-33\\area-33h-acceptance.md"
+    },
+    {
+        "Area":  "area-34",
+        "Status":  "COMPLETED / FROZEN",
+        "EvidenceFiles":  16,
+        "AcceptanceEvidence":  9,
+        "Evidence":  "C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-34\\area-34-acceptance-and-freeze.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-34\\area-34-final-integration.json | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-34\\area-34a-acceptance.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-34\\area-34b-acceptance.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-34\\area-34c-acceptance.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-34\\area-34d-acceptance.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-34\\area-34e-acceptance.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-34\\area-34f-acceptance.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-34\\area-34g-acceptance.md"
+    },
+    {
+        "Area":  "area-35",
+        "Status":  "COMPLETED / FROZEN",
+        "EvidenceFiles":  10,
+        "AcceptanceEvidence":  10,
+        "Evidence":  "C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-35\\area-35-acceptance-and-freeze.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-35\\area-35-final-integration.json | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-35\\area-35a-acceptance.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-35\\area-35b-acceptance.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-35\\area-35c-acceptance.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-35\\area-35d-acceptance.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-35\\area-35e-acceptance.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-35\\area-35f-acceptance.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-35\\area-35g-acceptance.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-35\\area-35h-acceptance.md"
+    },
+    {
+        "Area":  "area-36",
+        "Status":  "COMPLETED / FROZEN",
+        "EvidenceFiles":  7,
+        "AcceptanceEvidence":  7,
+        "Evidence":  "C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-36\\area-36-acceptance-and-freeze.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-36\\area-36-final-integration.json | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-36\\area-36a-acceptance.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-36\\area-36b-acceptance.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-36\\area-36c-acceptance.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-36\\area-36d-acceptance.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-36\\area-36e-acceptance.md"
+    },
+    {
+        "Area":  "area-37",
+        "Status":  "COMPLETED / FROZEN",
+        "EvidenceFiles":  10,
+        "AcceptanceEvidence":  10,
+        "Evidence":  "C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-37\\area-37-acceptance-and-freeze.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-37\\area-37-final-integration.json | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-37\\area-37a-acceptance.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-37\\area-37b-acceptance.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-37\\area-37c-acceptance.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-37\\area-37d-acceptance.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-37\\area-37e-acceptance.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-37\\area-37f-acceptance.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-37\\area-37g-acceptance.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-37\\area-37h-acceptance.md"
+    },
+    {
+        "Area":  "area-38",
+        "Status":  "COMPLETED / FROZEN",
+        "EvidenceFiles":  9,
+        "AcceptanceEvidence":  9,
+        "Evidence":  "C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-38\\area-38-acceptance-and-freeze.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-38\\area-38-final-integration.json | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-38\\area-38a-acceptance.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-38\\area-38b-acceptance.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-38\\area-38c-acceptance.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-38\\area-38d-acceptance.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-38\\area-38e-acceptance.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-38\\area-38f-acceptance.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-38\\area-38g-acceptance.md"
+    },
+    {
+        "Area":  "area-39",
+        "Status":  "PASS / FROZEN",
+        "EvidenceFiles":  3,
+        "AcceptanceEvidence":  2,
+        "Evidence":  "C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-39\\area-39-acceptance-and-freeze.md | C:\\Users\\sandeep\\Desktop\\Cloud-Native Lakehouse, CDC \u0026 AI-Ready Data\\evidence\\area-39\\area-39-final-integration.json"
+    }
+]

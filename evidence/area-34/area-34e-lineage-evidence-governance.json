@@ -1,0 +1,10 @@
+{
+  "area": "34-E",
+  "status": "PASS",
+  "lineage": "PASS",
+  "evidence_attribution": "PASS",
+  "reproducibility": "PASS",
+  "claim_integrity": "PASS",
+  "local_aws_boundary": "PASS",
+  "evidence_retention": "PASS"
+}

@@ -1,0 +1,12 @@
+{
+  "area": "33-E",
+  "status": "PASS",
+  "network_boundary": "PASS",
+  "database_access": "PASS",
+  "s3_access_boundary": "PASS",
+  "catalog_access": "PASS",
+  "environment_separation": "PASS",
+  "public_exposure_default": "DENY",
+  "aws_network_resources_created": "NONE",
+  "aws_execution": "NOT CLAIMED"
+}

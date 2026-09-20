@@ -1,0 +1,65 @@
+{
+  "area": "31-H",
+  "integration": "observability_to_recovery",
+  "mode": "CONTROLLED_SIMULATION",
+  "scenarios_evaluated": 4,
+  "successful_recovery_paths": 2,
+  "blocked_paths": 2,
+  "checkpoint_preserved_on_failure": true,
+  "checkpoint_advances_only_after_success": true,
+  "autonomous_remediation": "DISABLED",
+  "production_mutation": "NONE",
+  "postgresql_modified": "NONE",
+  "iceberg_modified": "NONE",
+  "aws_execution": "NOT CLAIMED",
+  "scenarios": [
+    {
+      "id": "R01",
+      "alert": "checkpoint_commit_failure",
+      "alert_severity": "CRITICAL",
+      "orchestration_state": "FAILED",
+      "recovery_state": "RECOVERING",
+      "checkpoint_before": 120,
+      "checkpoint_after_failure": 120,
+      "recovery_action": "restart_from_last_committed_checkpoint",
+      "final_state": "SUCCEEDED",
+      "checkpoint_after_recovery": 124
+    },
+    {
+      "id": "R02",
+      "alert": "dq_rule_failure",
+      "alert_severity": "HIGH",
+      "orchestration_state": "BLOCKED",
+      "recovery_state": "BLOCKED",
+      "checkpoint_before": 120,
+      "checkpoint_after_failure": 120,
+      "recovery_action": "investigate_and_correct_dq_failure",
+      "final_state": "BLOCKED",
+      "checkpoint_after_recovery": 120
+    },
+    {
+      "id": "R03",
+      "alert": "reconciliation_discrepancy",
+      "alert_severity": "CRITICAL",
+      "orchestration_state": "BLOCKED",
+      "recovery_state": "BLOCKED",
+      "checkpoint_before": 120,
+      "checkpoint_after_failure": 120,
+      "recovery_action": "investigate_reconciliation_discrepancy",
+      "final_state": "BLOCKED",
+      "checkpoint_after_recovery": 120
+    },
+    {
+      "id": "R04",
+      "alert": "cdc_ordering_rejection",
+      "alert_severity": "CRITICAL",
+      "orchestration_state": "FAILED",
+      "recovery_state": "RECOVERING",
+      "checkpoint_before": 120,
+      "checkpoint_after_failure": 120,
+      "recovery_action": "reject_invalid_order_and_replay_from_checkpoint",
+      "final_state": "SUCCEEDED",
+      "checkpoint_after_recovery": 124
+    }
+  ]
+}

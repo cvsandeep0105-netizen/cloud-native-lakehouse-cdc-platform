@@ -1,0 +1,17 @@
+﻿{
+  "area": "36",
+  "title": "CI/CD & Software Supply Chain",
+  "36-F-A": "PASS",
+  "36-F-B": "PASS",
+  "36-F-C": "PASS",
+  "36-F-D": "PASS",
+  "36-F-E": "PASS",
+  "ci_workflow": "PASS",
+  "pytest_quality_gate": "PASS",
+  "dependency_locking": "PASS",
+  "secret_protection": "PASS",
+  "terraform_provider_lock": "PASS",
+  "aws_deployment": "NOT EXECUTED",
+  "aws_resources_created": "NONE",
+  "status": "PASS / FROZEN"
+}

@@ -1,0 +1,135 @@
+{
+  "area": "32-B",
+  "measurement_model": "deterministic_slo_sla_measurement",
+  "measurements": [
+    {
+      "id": "SLO-M01",
+      "slo": "Pipeline successful completion",
+      "numerator": "eligible runs completed successfully",
+      "denominator": "eligible pipeline runs",
+      "window": "calendar month",
+      "breach": "ratio < 99.0%"
+    },
+    {
+      "id": "SLO-M02",
+      "slo": "Data freshness",
+      "numerator": "eligible deliveries completed within 30 minutes",
+      "denominator": "eligible deliveries",
+      "window": "calendar month",
+      "breach": "ratio < 99.0%"
+    },
+    {
+      "id": "SLO-M03",
+      "slo": "CDC capture latency",
+      "numerator": "eligible CDC events captured within 5 minutes",
+      "denominator": "eligible CDC events",
+      "window": "calendar month",
+      "breach": "ratio < 99.0%"
+    },
+    {
+      "id": "SLO-M04",
+      "slo": "Incremental processing completion",
+      "numerator": "eligible incremental batches completed within 20 minutes",
+      "denominator": "eligible incremental batches",
+      "window": "calendar month",
+      "breach": "ratio < 99.0%"
+    },
+    {
+      "id": "SLO-M05",
+      "slo": "DQ gate compliance",
+      "numerator": "blocking DQ evaluations passed",
+      "denominator": "blocking DQ evaluations",
+      "window": "per run and calendar month",
+      "breach": "ratio < 100%"
+    },
+    {
+      "id": "SLO-M06",
+      "slo": "Reconciliation compliance",
+      "numerator": "blocking reconciliation checks passed",
+      "denominator": "blocking reconciliation checks",
+      "window": "per run and calendar month",
+      "breach": "ratio < 100%"
+    },
+    {
+      "id": "SLO-M07",
+      "slo": "Gold product freshness",
+      "numerator": "eligible Gold publications within 30 minutes",
+      "denominator": "eligible Gold publications",
+      "window": "calendar month",
+      "breach": "ratio < 99.0%"
+    },
+    {
+      "id": "SLO-M08",
+      "slo": "Recovery completion",
+      "numerator": "eligible recoverable incidents resolved within 60 minutes",
+      "denominator": "eligible recoverable incidents",
+      "window": "calendar month",
+      "breach": "ratio < 95.0%"
+    },
+    {
+      "id": "SLO-M09",
+      "slo": "Critical incident acknowledgement",
+      "numerator": "critical incidents acknowledged within 15 minutes",
+      "denominator": "eligible critical incidents",
+      "window": "calendar month",
+      "breach": "ratio < 99.0%"
+    },
+    {
+      "id": "SLO-M10",
+      "slo": "Critical incident containment",
+      "numerator": "critical incidents contained within 30 minutes",
+      "denominator": "eligible critical incidents",
+      "window": "calendar month",
+      "breach": "ratio < 99.0%"
+    },
+    {
+      "id": "SLO-M11",
+      "slo": "RPO",
+      "numerator": "committed CDC events preserved beyond failure boundary",
+      "denominator": "committed CDC events processed before failure",
+      "window": "per incident",
+      "breach": "committed events lost > 0"
+    },
+    {
+      "id": "SLO-M12",
+      "slo": "RTO",
+      "numerator": "recoverable incidents restored within 60 minutes",
+      "denominator": "eligible recoverable incidents",
+      "window": "per incident and calendar month",
+      "breach": "recovery duration > 60 minutes"
+    }
+  ],
+  "measurement_rules": {
+    "zero_denominator": "A zero eligible population is recorded as NOT MEASURED, not as a success.",
+    "missing_evidence": "Missing required evidence invalidates the measurement and requires operational review.",
+    "time_boundary": "All timestamps use a single approved operational timezone and synchronized clock source.",
+    "retry_boundary": "Retries remain part of the same logical run unless a new run is explicitly created.",
+    "checkpoint_boundary": "Checkpoint position is measured from the last successfully committed checkpoint.",
+    "dq_boundary": "Only blocking deterministic DQ rules contribute to the DQ SLO.",
+    "reconciliation_boundary": "Only blocking deterministic reconciliation checks contribute to the reconciliation SLO.",
+    "incident_boundary": "Incident duration begins at the recorded detection time and ends at validated recovery/containment.",
+    "aws_boundary": "AWS production telemetry is not executed by this measurement model."
+  },
+  "evidence_format": {
+    "required_fields": [
+      "measurement_id",
+      "window_start",
+      "window_end",
+      "numerator",
+      "denominator",
+      "ratio_or_duration",
+      "status",
+      "evidence_reference"
+    ],
+    "status_values": [
+      "MEETS",
+      "BREACH",
+      "NOT MEASURED",
+      "INVALID"
+    ]
+  },
+  "production_mutation": "NONE",
+  "postgresql_modified": "NONE",
+  "iceberg_modified": "NONE",
+  "aws_execution": "NOT CLAIMED"
+}

@@ -1,0 +1,26 @@
+{
+  "area": "38",
+  "title": "AWS Cost Engineering",
+  "subareas": {
+    "38-A": "PASS",
+    "38-B": "PASS",
+    "38-C": "PASS",
+    "38-D": "PASS",
+    "38-E": "PASS",
+    "38-F": "PASS",
+    "38-G": "PASS",
+    "38-H": "PASS"
+  },
+  "evidence_completeness": "PASS",
+  "cost_strategy": "PASS",
+  "pricing_inputs": "PASS",
+  "cost_model": "PASS",
+  "cost_estimation": "PASS",
+  "optimization_controls": "PASS",
+  "cost_observability": "PASS",
+  "architecture_review": "PASS",
+  "aws_resources": "NONE",
+  "terraform_apply": "NO",
+  "actual_aws_spend_claimed": "NO",
+  "status": "PASS / FROZEN"
+}

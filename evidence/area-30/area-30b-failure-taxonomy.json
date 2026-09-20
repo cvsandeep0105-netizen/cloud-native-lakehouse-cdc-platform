@@ -1,0 +1,8 @@
+{
+  "failure_classes": 14,
+  "checkpoint_advance_on_failure": false,
+  "deterministic_controls_authoritative": true,
+  "human_review_for_unresolved": true,
+  "production_mutation": "NONE",
+  "aws_execution": "NOT CLAIMED"
+}

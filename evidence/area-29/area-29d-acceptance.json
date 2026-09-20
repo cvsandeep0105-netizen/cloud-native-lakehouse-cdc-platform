@@ -1,0 +1,14 @@
+{
+  "area": "29-D",
+  "status": "PASS",
+  "run_states": 6,
+  "state_transitions": "PASS",
+  "run_control_fields": 11,
+  "stage_control_fields": 10,
+  "checkpoint_rule": "PASS",
+  "retry_rule": "PASS",
+  "blocking_rule": "PASS",
+  "auditability": "PASS",
+  "production_data_modified": "NONE",
+  "aws_execution": "NOT CLAIMED"
+}

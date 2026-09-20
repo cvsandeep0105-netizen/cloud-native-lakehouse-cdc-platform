@@ -1,0 +1,64 @@
+{
+  "record_count": 3,
+  "required_fields": [
+    "failure_id",
+    "run_id",
+    "stage",
+    "failure_type",
+    "severity",
+    "error",
+    "checkpoint_before",
+    "checkpoint_after",
+    "recovery_action",
+    "outcome",
+    "escalation"
+  ],
+  "records": [
+    {
+      "failure_id": "F01",
+      "run_id": "RUN-001",
+      "stage": "S04_incremental_processing",
+      "failure_type": "Transient Infrastructure",
+      "severity": "HIGH",
+      "error": "Controlled transient failure",
+      "checkpoint_before": 120,
+      "checkpoint_after": 120,
+      "recovery_action": "RETRY",
+      "outcome": "RECOVERED",
+      "escalation": "NONE"
+    },
+    {
+      "failure_id": "F02",
+      "run_id": "RUN-002",
+      "stage": "S03_cdc_capture",
+      "failure_type": "CDC Capture Failure",
+      "severity": "CRITICAL",
+      "error": "Controlled capture interruption",
+      "checkpoint_before": 120,
+      "checkpoint_after": 120,
+      "recovery_action": "RESTART_OR_REPLAY",
+      "outcome": "RECOVERED",
+      "escalation": "CDC REVIEW"
+    },
+    {
+      "failure_id": "F03",
+      "run_id": "RUN-003",
+      "stage": "S06_data_quality",
+      "failure_type": "Data Quality Failure",
+      "severity": "HIGH",
+      "error": "Controlled DQ rule failure",
+      "checkpoint_before": 124,
+      "checkpoint_after": 124,
+      "recovery_action": "BLOCK_AND_INVESTIGATE",
+      "outcome": "BLOCKED",
+      "escalation": "DQ REVIEW"
+    }
+  ],
+  "checkpoint_preserved_on_failure": true,
+  "recovery_actions_auditable": true,
+  "escalation_auditable": true,
+  "production_data_modified": "NONE",
+  "postgresql_modified": "NONE",
+  "iceberg_modified": "NONE",
+  "aws_execution": "NOT CLAIMED"
+}

@@ -1,0 +1,17 @@
+{
+  "area": "34-G",
+  "status": "PASS",
+  "steps_validated": 12,
+  "dataset_identification": "PASS",
+  "owner_identification": "PASS",
+  "classification_review": "PASS",
+  "lineage_review": "PASS",
+  "access_review": "PASS",
+  "dq_reconciliation_review": "PASS",
+  "retention_review": "PASS",
+  "compliance_escalation": "PASS",
+  "human_decision": "PASS",
+  "corrective_action_authorization": "PASS",
+  "evidence_retention": "PASS",
+  "ai_authorization": "DISABLED"
+}

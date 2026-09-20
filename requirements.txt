@@ -1,0 +1,8 @@
+﻿pandas==2.3.3
+pyarrow==22.0.0
+SQLAlchemy==2.0.53
+psycopg[binary]==3.3.5
+boto3==1.43.94
+PyYAML==6.0.3
+pytest==8.4.2
+pyspark==3.5.8

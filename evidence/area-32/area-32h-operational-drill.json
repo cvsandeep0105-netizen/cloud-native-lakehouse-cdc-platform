@@ -1,0 +1,85 @@
+{
+  "area": "32-H",
+  "simulation": "END_TO_END_OPERATIONAL_DRILL",
+  "steps": [
+    {
+      "step": 1,
+      "state": "ALERT_RECEIVED",
+      "result": "PASS"
+    },
+    {
+      "step": 2,
+      "state": "INCIDENT_CREATED",
+      "result": "PASS"
+    },
+    {
+      "step": 3,
+      "state": "TRIAGED",
+      "result": "PASS"
+    },
+    {
+      "step": 4,
+      "state": "CRITICAL_ESCALATION",
+      "result": "PASS"
+    },
+    {
+      "step": 5,
+      "state": "CHECKPOINT_PRESERVED",
+      "checkpoint": 120,
+      "result": "PASS"
+    },
+    {
+      "step": 6,
+      "state": "RECOVERY_STARTED",
+      "result": "PASS"
+    },
+    {
+      "step": 7,
+      "state": "EVENTS_REPROCESSED",
+      "events": "121-124",
+      "result": "PASS"
+    },
+    {
+      "step": 8,
+      "state": "RECOVERY_VALIDATED",
+      "checkpoint": 124,
+      "result": "PASS"
+    },
+    {
+      "step": 9,
+      "state": "SLO_RTO_MEASURED",
+      "duration_minutes": 45,
+      "result": "PASS"
+    },
+    {
+      "step": 10,
+      "state": "DQ_RECONCILIATION_VALIDATED",
+      "result": "PASS"
+    },
+    {
+      "step": 11,
+      "state": "DOWNSTREAM_RESUMED",
+      "result": "PASS"
+    },
+    {
+      "step": 12,
+      "state": "INCIDENT_CLOSED",
+      "result": "PASS"
+    }
+  ],
+  "steps_validated": 12,
+  "checkpoint_preserved_on_failure": true,
+  "checkpoint_advanced_after_success": true,
+  "rto_target_minutes": 60,
+  "simulated_recovery_minutes": 45,
+  "rto_status": "MEETS",
+  "dq_reconciliation_gate": "PASS",
+  "downstream_resume": "PASS",
+  "incident_closure": "PASS",
+  "human_review_required": true,
+  "autonomous_remediation": "DISABLED",
+  "production_mutation": "NONE",
+  "postgresql_modified": "NONE",
+  "iceberg_modified": "NONE",
+  "aws_execution": "NOT CLAIMED"
+}

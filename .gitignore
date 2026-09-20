@@ -1,0 +1,74 @@
+﻿# ============================================================
+# Project 02 — Cloud-Native Lakehouse, CDC & AI-Ready Data
+# Git ignore / security boundary
+# ============================================================
+
+# Secrets and environment configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+secrets.json
+**/secrets/
+**/credentials/
+
+# Terraform state and local Terraform artifacts
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+env/
+
+# Spark / Hadoop / local runtime artifacts
+*.log
+logs/
+checkpoint/
+checkpoints/
+tmp/
+temp/
+
+# Generated data and local processing output
+data/raw/
+data/processed/
+data/generated/
+output/
+outputs/
+
+# IDE / editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Operating-system files
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Local datasets and lakehouse runtime data
+data/
+
+# Local Terraform plan artifacts
+*.tfplan
+
+# Local report backups
+docs/engineering-report/*.backup.md
+
+# Terraform local runtime/cache
+**/.terraform/

@@ -1,0 +1,233 @@
+{
+  "metric_count": 28,
+  "metrics": [
+    {
+      "metric_id": "M01",
+      "metric_name": "Pipeline Run Success Rate",
+      "domain": "pipeline",
+      "measurement_point": "run outcome",
+      "severity": "INFO/WARNING",
+      "definition": "successful runs / total runs"
+    },
+    {
+      "metric_id": "M02",
+      "metric_name": "Stage Duration",
+      "domain": "pipeline",
+      "measurement_point": "stage execution",
+      "severity": "INFO/WARNING",
+      "definition": "elapsed time per stage"
+    },
+    {
+      "metric_id": "M03",
+      "metric_name": "Pipeline Failure Count",
+      "domain": "pipeline",
+      "measurement_point": "run outcome",
+      "severity": "HIGH",
+      "definition": "failed pipeline runs"
+    },
+    {
+      "metric_id": "M04",
+      "metric_name": "Retry Count",
+      "domain": "pipeline",
+      "measurement_point": "recovery",
+      "severity": "WARNING",
+      "definition": "retry attempts per run/stage"
+    },
+    {
+      "metric_id": "M05",
+      "metric_name": "CDC Events Captured",
+      "domain": "cdc",
+      "measurement_point": "capture",
+      "severity": "INFO",
+      "definition": "captured change events"
+    },
+    {
+      "metric_id": "M06",
+      "metric_name": "CDC Ordering Rejections",
+      "domain": "cdc",
+      "measurement_point": "ordering",
+      "severity": "CRITICAL",
+      "definition": "events rejected for invalid ordering"
+    },
+    {
+      "metric_id": "M07",
+      "metric_name": "CDC Duplicate Events",
+      "domain": "cdc",
+      "measurement_point": "deduplication",
+      "severity": "WARNING",
+      "definition": "duplicate event identities detected"
+    },
+    {
+      "metric_id": "M08",
+      "metric_name": "CDC Capture Lag",
+      "domain": "cdc",
+      "measurement_point": "source position",
+      "severity": "HIGH",
+      "definition": "distance between capture and processing position"
+    },
+    {
+      "metric_id": "M09",
+      "metric_name": "Checkpoint Position",
+      "domain": "checkpoint",
+      "measurement_point": "processing boundary",
+      "severity": "INFO",
+      "definition": "latest committed source position"
+    },
+    {
+      "metric_id": "M10",
+      "metric_name": "Checkpoint Advancement",
+      "domain": "checkpoint",
+      "measurement_point": "commit",
+      "severity": "INFO",
+      "definition": "successful checkpoint advancement"
+    },
+    {
+      "metric_id": "M11",
+      "metric_name": "Checkpoint Commit Failures",
+      "domain": "checkpoint",
+      "measurement_point": "commit",
+      "severity": "CRITICAL",
+      "definition": "failed checkpoint persistence attempts"
+    },
+    {
+      "metric_id": "M12",
+      "metric_name": "Incremental Batch Size",
+      "domain": "incremental",
+      "measurement_point": "batch",
+      "severity": "INFO",
+      "definition": "events selected for processing"
+    },
+    {
+      "metric_id": "M13",
+      "metric_name": "Replay-Filtered Events",
+      "domain": "incremental",
+      "measurement_point": "replay",
+      "severity": "INFO",
+      "definition": "events filtered because position is already committed"
+    },
+    {
+      "metric_id": "M14",
+      "metric_name": "DQ Rules Passed",
+      "domain": "dq",
+      "measurement_point": "quality",
+      "severity": "INFO",
+      "definition": "successful deterministic DQ rules"
+    },
+    {
+      "metric_id": "M15",
+      "metric_name": "DQ Rules Failed",
+      "domain": "dq",
+      "measurement_point": "quality",
+      "severity": "HIGH",
+      "definition": "failed deterministic DQ rules"
+    },
+    {
+      "metric_id": "M16",
+      "metric_name": "DQ Failure Rate",
+      "domain": "dq",
+      "measurement_point": "quality",
+      "severity": "HIGH",
+      "definition": "failed DQ rules / executed DQ rules"
+    },
+    {
+      "metric_id": "M17",
+      "metric_name": "Reconciliation Checks Passed",
+      "domain": "reconciliation",
+      "measurement_point": "trust",
+      "severity": "INFO",
+      "definition": "successful reconciliation checks"
+    },
+    {
+      "metric_id": "M18",
+      "metric_name": "Reconciliation Discrepancies",
+      "domain": "reconciliation",
+      "measurement_point": "trust",
+      "severity": "CRITICAL",
+      "definition": "unresolved reconciliation discrepancies"
+    },
+    {
+      "metric_id": "M19",
+      "metric_name": "Silver Row Count",
+      "domain": "silver",
+      "measurement_point": "dataset state",
+      "severity": "INFO",
+      "definition": "current validated Silver row count"
+    },
+    {
+      "metric_id": "M20",
+      "metric_name": "Silver Processing Duration",
+      "domain": "silver",
+      "measurement_point": "processing",
+      "severity": "WARNING",
+      "definition": "Silver processing elapsed time"
+    },
+    {
+      "metric_id": "M21",
+      "metric_name": "Gold Product Row Count",
+      "domain": "gold",
+      "measurement_point": "product state",
+      "severity": "INFO",
+      "definition": "current validated Gold product row count"
+    },
+    {
+      "metric_id": "M22",
+      "metric_name": "Gold Processing Duration",
+      "domain": "gold",
+      "measurement_point": "processing",
+      "severity": "WARNING",
+      "definition": "Gold product processing elapsed time"
+    },
+    {
+      "metric_id": "M23",
+      "metric_name": "Schema Compatibility Failures",
+      "domain": "schema",
+      "measurement_point": "compatibility",
+      "severity": "CRITICAL",
+      "definition": "schema validation failures"
+    },
+    {
+      "metric_id": "M24",
+      "metric_name": "Lakehouse File Count",
+      "domain": "lakehouse",
+      "measurement_point": "storage",
+      "severity": "WARNING",
+      "definition": "data files per managed dataset"
+    },
+    {
+      "metric_id": "M25",
+      "metric_name": "Lakehouse Storage Growth",
+      "domain": "lakehouse",
+      "measurement_point": "storage",
+      "severity": "WARNING",
+      "definition": "storage growth over time"
+    },
+    {
+      "metric_id": "M26",
+      "metric_name": "Metadata Validation Failures",
+      "domain": "metadata",
+      "measurement_point": "catalog/lineage",
+      "severity": "HIGH",
+      "definition": "metadata or lineage validation failures"
+    },
+    {
+      "metric_id": "M27",
+      "metric_name": "Recovery Events",
+      "domain": "recovery",
+      "measurement_point": "failure handling",
+      "severity": "HIGH",
+      "definition": "recovery actions initiated"
+    },
+    {
+      "metric_id": "M28",
+      "metric_name": "Blocked Downstream Stages",
+      "domain": "orchestration",
+      "measurement_point": "dependency",
+      "severity": "HIGH",
+      "definition": "stages blocked by upstream failure"
+    }
+  ],
+  "collection_boundary": "local deterministic observability design; no production telemetry deployment",
+  "slo_targets": "DEFERRED TO AREA 32",
+  "aws_execution": "NOT CLAIMED",
+  "production_mutation": "NONE"
+}

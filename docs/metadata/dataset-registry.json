@@ -1,0 +1,176 @@
+{
+  "project": "Project 02 \u2014 Cloud-Native Lakehouse, CDC & AI-Ready Data Platform",
+  "metadata_standard": "Project 02 Metadata Registry v1",
+  "catalog_boundary": {
+    "local": "Apache Iceberg Hadoop Catalog",
+    "production": "AWS Glue Data Catalog"
+  },
+  "datasets": [
+    {
+      "name": "customers",
+      "layer": "source/raw/bronze/silver",
+      "grain": "one row per customer_id",
+      "primary_key": [
+        "customer_id"
+      ],
+      "source": "olist_customers_dataset.csv"
+    },
+    {
+      "name": "geolocation",
+      "layer": "source/raw/bronze/silver",
+      "grain": "one row per geolocation_id",
+      "primary_key": [
+        "geolocation_id"
+      ],
+      "source": "olist_geolocation_dataset.csv"
+    },
+    {
+      "name": "orders",
+      "layer": "source/raw/bronze/silver",
+      "grain": "one row per order_id",
+      "primary_key": [
+        "order_id"
+      ],
+      "source": "olist_orders_dataset.csv"
+    },
+    {
+      "name": "order_items",
+      "layer": "source/raw/bronze/silver",
+      "grain": "one row per order_id + order_item_id",
+      "primary_key": [
+        "order_id",
+        "order_item_id"
+      ],
+      "source": "olist_order_items_dataset.csv"
+    },
+    {
+      "name": "order_payments",
+      "layer": "source/raw/bronze/silver",
+      "grain": "one row per order_id + payment_sequential",
+      "primary_key": [
+        "order_id",
+        "payment_sequential"
+      ],
+      "source": "olist_order_payments_dataset.csv"
+    },
+    {
+      "name": "order_reviews",
+      "layer": "source/raw/bronze/silver",
+      "grain": "one row per order_review_key",
+      "primary_key": [
+        "order_review_key"
+      ],
+      "source": "olist_order_reviews_dataset.csv"
+    },
+    {
+      "name": "products",
+      "layer": "source/raw/bronze/silver",
+      "grain": "one row per product_id",
+      "primary_key": [
+        "product_id"
+      ],
+      "source": "olist_products_dataset.csv"
+    },
+    {
+      "name": "sellers",
+      "layer": "source/raw/bronze/silver",
+      "grain": "one row per seller_id",
+      "primary_key": [
+        "seller_id"
+      ],
+      "source": "olist_sellers_dataset.csv"
+    },
+    {
+      "name": "category_translation",
+      "layer": "source/raw/bronze/silver",
+      "grain": "one row per product_category_name",
+      "primary_key": [
+        "product_category_name"
+      ],
+      "source": "product_category_name_translation.csv"
+    }
+  ],
+  "gold_products": [
+    {
+      "name": "order_performance",
+      "layer": "gold",
+      "grain": "one row per order_id",
+      "primary_key": [
+        "order_id"
+      ],
+      "source_tables": [
+        "silver.orders",
+        "silver.order_items"
+      ]
+    },
+    {
+      "name": "customer_analytics",
+      "layer": "gold",
+      "grain": "one row per customer_id",
+      "primary_key": [
+        "customer_id"
+      ],
+      "source_tables": [
+        "silver.customers",
+        "silver.orders",
+        "silver.order_items"
+      ]
+    },
+    {
+      "name": "product_performance",
+      "layer": "gold",
+      "grain": "one row per product_id",
+      "primary_key": [
+        "product_id"
+      ],
+      "source_tables": [
+        "silver.products",
+        "silver.order_items"
+      ]
+    },
+    {
+      "name": "seller_performance",
+      "layer": "gold",
+      "grain": "one row per seller_id",
+      "primary_key": [
+        "seller_id"
+      ],
+      "source_tables": [
+        "silver.sellers",
+        "silver.order_items"
+      ]
+    },
+    {
+      "name": "payment_analytics",
+      "layer": "gold",
+      "grain": "one row per order_id + payment_sequential",
+      "primary_key": [
+        "order_id",
+        "payment_sequential"
+      ],
+      "source_tables": [
+        "silver.order_payments"
+      ]
+    },
+    {
+      "name": "review_analytics",
+      "layer": "gold",
+      "grain": "one row per order_review_key",
+      "primary_key": [
+        "order_review_key"
+      ],
+      "source_tables": [
+        "silver.order_reviews"
+      ]
+    }
+  ],
+  "lineage_flow": [
+    "source",
+    "postgresql",
+    "cdc",
+    "raw",
+    "bronze",
+    "silver",
+    "gold"
+  ]
+}

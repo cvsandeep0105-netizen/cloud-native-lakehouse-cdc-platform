@@ -1,0 +1,10 @@
+{
+  "area": "34-D",
+  "status": "PASS",
+  "data_minimization": "PASS",
+  "classification_alignment": "PASS",
+  "lineage_requirement": "PASS",
+  "retention_requirement": "PASS",
+  "human_legal_review": "PASS",
+  "formal_certification": "NOT CLAIMED"
+}

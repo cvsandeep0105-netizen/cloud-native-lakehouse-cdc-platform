@@ -1,0 +1,12 @@
+{
+  "area": "33-D",
+  "status": "PASS",
+  "encryption_at_rest": "PASS",
+  "encryption_in_transit": "PASS",
+  "kms_strategy": "PASS",
+  "key_admin_separation": "PASS",
+  "least_privilege": "PASS",
+  "key_rotation": "PASS",
+  "aws_kms_resources_created": "NONE",
+  "aws_execution": "NOT CLAIMED"
+}

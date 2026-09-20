@@ -1,0 +1,27 @@
+{
+  "integration": "Area 22 checkpoint framework with Area 29 orchestration control plane",
+  "initial_checkpoint": 120,
+  "first_run_events": [
+    121,
+    122,
+    123,
+    124
+  ],
+  "failure_checkpoint": 120,
+  "restart_events": [
+    121,
+    122,
+    123,
+    124
+  ],
+  "successful_checkpoint": 124,
+  "post_commit_replay": [],
+  "downstream_before_upstream_success": "BLOCKED",
+  "downstream_after_upstream_success": "ELIGIBLE",
+  "checkpoint_advance_on_failure": false,
+  "checkpoint_advance_on_success": true,
+  "production_data_modified": "NONE",
+  "postgresql_modified": "NONE",
+  "iceberg_modified": "NONE",
+  "aws_execution": "NOT CLAIMED"
+}

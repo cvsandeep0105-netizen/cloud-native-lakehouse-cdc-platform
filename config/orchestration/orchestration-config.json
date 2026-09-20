@@ -1,0 +1,110 @@
+{
+  "orchestration": "project02_pipeline",
+  "execution_mode": "dependency_gated",
+  "checkpoint_authority": "Area 22",
+  "stages": [
+    {
+      "stage_id": "S01",
+      "name": "source_readiness",
+      "owner": "source_platform",
+      "blocking": true,
+      "retryable": false
+    },
+    {
+      "stage_id": "S02",
+      "name": "initial_snapshot",
+      "owner": "snapshot_pipeline",
+      "blocking": true,
+      "retryable": false
+    },
+    {
+      "stage_id": "S03",
+      "name": "cdc_capture",
+      "owner": "cdc_pipeline",
+      "blocking": true,
+      "retryable": true
+    },
+    {
+      "stage_id": "S04",
+      "name": "incremental_processing",
+      "owner": "incremental_framework",
+      "blocking": true,
+      "retryable": true
+    },
+    {
+      "stage_id": "S05",
+      "name": "silver_processing",
+      "owner": "silver_pipeline",
+      "blocking": true,
+      "retryable": true
+    },
+    {
+      "stage_id": "S06",
+      "name": "data_quality",
+      "owner": "data_quality",
+      "blocking": true,
+      "retryable": false
+    },
+    {
+      "stage_id": "S07",
+      "name": "reconciliation",
+      "owner": "reconciliation",
+      "blocking": true,
+      "retryable": false
+    },
+    {
+      "stage_id": "S08",
+      "name": "gold_products",
+      "owner": "gold_pipeline",
+      "blocking": true,
+      "retryable": true
+    },
+    {
+      "stage_id": "S09",
+      "name": "metadata_lineage_validation",
+      "owner": "metadata_lineage",
+      "blocking": true,
+      "retryable": false
+    }
+  ],
+  "dependencies": {
+    "S01": [],
+    "S02": [
+      "S01"
+    ],
+    "S03": [
+      "S02"
+    ],
+    "S04": [
+      "S03"
+    ],
+    "S05": [
+      "S04"
+    ],
+    "S06": [
+      "S05"
+    ],
+    "S07": [
+      "S06"
+    ],
+    "S08": [
+      "S07"
+    ],
+    "S09": [
+      "S08"
+    ]
+  },
+  "stage_contracts": {
+    "S01": "source availability and operational readiness",
+    "S02": "snapshot completeness and source-target reconciliation",
+    "S03": "CDC event contract, ordering and capture validity",
+    "S04": "checkpoint-bounded deterministic incremental processing",
+    "S05": "Silver CDC application and identity preservation",
+    "S06": "deterministic data-quality rule validation",
+    "S07": "cross-layer reconciliation and trust validation",
+    "S08": "Gold product contract, grain and metric validation",
+    "S09": "metadata, catalog and lineage validation"
+  },
+  "production_mutation": "NONE",
+  "aws_execution": "NOT CLAIMED"
+}

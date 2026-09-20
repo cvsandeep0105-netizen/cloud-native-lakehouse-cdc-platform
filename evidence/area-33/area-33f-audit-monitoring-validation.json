@@ -1,0 +1,12 @@
+{
+  "area": "33-F",
+  "status": "PASS",
+  "auditability": "PASS",
+  "identity_attribution": "PASS",
+  "authorization_monitoring": "PASS",
+  "security_event_monitoring": "PASS",
+  "incident_correlation": "PASS",
+  "observability_integration": "PASS",
+  "aws_monitoring_resources_created": "NONE",
+  "aws_execution": "NOT CLAIMED"
+}
