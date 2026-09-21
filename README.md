@@ -207,6 +207,14 @@ The demo is designed as a safe interview/engineering validation workflow. It doe
 
 The final report documents architecture, engineering decisions, evidence, security, governance, performance, cost engineering, AWS deployment, limitations and final acceptance.
 
+### Portfolio
+
+[View Data Engineering Portfolio](https://cvsandeep0105-netizen.github.io/data-engineering-portfolio/)
+
+### Online Engineering Report
+
+[Read the Project 02 Engineering Report](https://cvsandeep0105-netizen.github.io/data-engineering-portfolio/project02-engineering-report.html)
+
 ## Repository Structure
 
 ```text
@@ -239,12 +247,14 @@ The dataset is static historical business data. Its use in this project is expli
 
 ## Project Status
 
-**Areas 01–39: Complete / Frozen**
+**Areas 01–40: COMPLETE / FROZEN**
 
-**Area 40: Final portfolio integration, Engineering Report, acceptance and project freeze**
+The project has completed engineering implementation, validation, final acceptance and portfolio integration.
 
-The project will be marked fully frozen only after the final README, Engineering Report, portfolio integration, GitHub validation and final acceptance are complete.
+The repository does not claim public-cloud production deployment beyond the explicitly documented AWS development and validation boundary.
 
 ## Repository
 
 https://github.com/cvsandeep0105-netizen/cloud-native-lakehouse-cdc-platform
+
+
