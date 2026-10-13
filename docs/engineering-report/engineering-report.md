@@ -1,4 +1,4 @@
-# Project 02 — Cloud-Native Lakehouse, CDC & AI-Ready Data Platform on AWS
+# Project 02 â€” Cloud-Native Lakehouse, CDC & AI-Ready Data Platform on AWS
 
 ## 1. Executive Summary
 
@@ -12,7 +12,7 @@ The platform uses the Olist Brazilian E-Commerce Public Dataset. The historical 
 
 ## 3. Architecture
 
-The platform follows a Raw → Bronze → Silver → Gold lakehouse progression. PostgreSQL provides the operational relational source. Snapshot and CDC boundaries feed immutable/raw processing, Bronze Parquet, Apache Iceberg, Silver incremental processing, and Gold business data products.
+The platform follows a Raw â†’ Bronze â†’ Silver â†’ Gold lakehouse progression. PostgreSQL provides the operational relational source. Snapshot and CDC boundaries feed immutable/raw processing, Bronze Parquet, Apache Iceberg, Silver incremental processing, and Gold business data products.
 
 ## 4. Lakehouse
 
@@ -44,7 +44,7 @@ Security engineering covers IAM, least privilege, secrets boundaries, encryption
 
 ## 11. Infrastructure as Code
 
-Terraform manages the AWS infrastructure boundary, including S3, KMS, Glue Catalog, Athena, IAM, and CloudWatch resources. Post-deployment Terraform validation reported no configuration drift.
+Terraform manages the AWS infrastructure boundary, including S3, KMS, Glue Catalog, Athena, IAM, and CloudWatch resources. The normal Terraform plan reported no changes at the time of validation. A subsequent refresh-only plan identified differences between live AWS configuration and saved Terraform state, including S3 encryption/versioning and resource tags. These differences remain subject to reconciliation; no Terraform apply was performed as part of this review.
 
 ## 12. CI/CD and Supply Chain
 
@@ -78,7 +78,7 @@ The authoritative Area 40 evidence index is stored at evidence/area-40-final-evi
 
 ## 17. Area Completion
 
-Areas 01–39 are complete and frozen. Area 40 is the final portfolio integration, Engineering Report, acceptance, and project freeze stage.
+Areas 01â€“39 are complete and frozen. Area 40 is the final portfolio integration, Engineering Report, acceptance, and project freeze stage.
 
 ## 18. Limitations
 
@@ -86,8 +86,21 @@ The Olist source is historical rather than a live production source. AWS DMS, St
 
 ## 19. Final Acceptance
 
-Final acceptance requires reconciliation of technical evidence, GitHub presentation, Engineering Report publication, portfolio integration, and final project freeze under Area 40.
+**Status: IN PROGRESS — FINAL ACCEPTANCE NOT GRANTED**
 
+Area 40 remains the final integration, acceptance, and project-freeze stage. The engineering implementation and previously documented Area 01–39 results are retained; this status update does not reopen completed engineering areas.
+
+The following acceptance gates remain open:
+
+1. Reconcile the approved Area 40 requirements against the available evidence.
+2. Determine whether AWS Glue tables are required by the approved project scope. The current audit observed the Glue database but zero Glue tables.
+3. Review the Terraform refresh-only findings involving live AWS configuration and saved state, including S3 encryption/versioning and resource tags. Do not apply changes blindly.
+4. Confirm the README, Markdown report, HTML report, and Area 40 evidence records communicate a consistent acceptance status.
+5. Verify the final GitHub repository presentation and published portfolio report after any explicitly approved publication.
+
+The normal Terraform plan previously reported no changes. A subsequent refresh-only plan identified differences requiring reconciliation. No Terraform apply was performed during this review, and no AWS infrastructure changes were authorized.
+
+Project acceptance and freeze will be recorded only after the required gates have been verified and the authoritative Area 40 evidence index has been updated accordingly.
 ---
 
-Project 02 — Cloud-Native Lakehouse, CDC & AI-Ready Data Platform on AWS
+Project 02 â€” Cloud-Native Lakehouse, CDC & AI-Ready Data Platform on AWS

@@ -254,7 +254,7 @@ PostgreSQL Operational Model
 <tr><td>Athena</td><td>Engine 3 workgroup deployed</td></tr>
 <tr><td>IAM</td><td>Data-platform role and policy deployed</td></tr>
 <tr><td>CloudWatch</td><td>Operational log groups deployed</td></tr>
-<tr><td>Terraform</td><td>Infrastructure managed and final plan reports no changes</td></tr>
+<tr><td>Terraform</td><td>Normal plan reported no changes; refresh-only plan identified live-configuration and saved-state differences requiring reconciliation. No apply was performed during this review.</td></tr>
 </table>
 </section>
 
@@ -324,7 +324,7 @@ PostgreSQL Operational Model
 <section>
 <h2>Final Acceptance</h2>
 <p>The engineering implementation, validation controls and AWS deployment evidence have been completed and validated against the project acceptance criteria.</p>
-<div class="notice ok"><strong>Engineering acceptance:</strong> the platform implementation and deployment validation are complete. Repository publication and portfolio integration are delivery and presentation steps surrounding the engineering artifact.</div>
+<div class="notice"><strong>Engineering implementation:</strong> the implementation and recorded deployment validation are documented in the evidence. Final project acceptance remains pending reconciliation of technical evidence, Terraform findings, repository publication, portfolio integration, and the Area 40 acceptance gates.</div>
 </section>
 </main>
 

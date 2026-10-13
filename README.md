@@ -1,6 +1,6 @@
-﻿# Cloud-Native Lakehouse, CDC & AI-Ready Data Platform
+# Cloud-Native Lakehouse, CDC & AI-Ready Data Platform
 
-[![Project Status](https://img.shields.io/badge/Status-Complete%20%2F%20Frozen-success)](https://github.com/cvsandeep0105-netizen/cloud-native-lakehouse-cdc-platform)
+[![Project Status](https://img.shields.io/badge/Status-Final%20Acceptance%20Pending-orange)](https://github.com/cvsandeep0105-netizen/cloud-native-lakehouse-cdc-platform)
 [![Platform](https://img.shields.io/badge/Platform-AWS-orange)](https://aws.amazon.com/)
 [![Infrastructure](https://img.shields.io/badge/IaC-Terraform-7B42BC)](https://www.terraform.io/)
 [![Lakehouse](https://img.shields.io/badge/Lakehouse-Apache%20Iceberg-blue)](https://iceberg.apache.org/)
@@ -88,7 +88,7 @@ AWS foundation: S3 + KMS + Glue Catalog + Athena + IAM + CloudWatch + Terraform.
 | Local Iceberg datasets | **9/9** |
 | AWS Raw datasets | **9/9** |
 | AWS Bronze datasets | **9/9** |
-| Terraform drift | **No changes** |
+| Terraform validation | Normal plan reported no changes; refresh-only review identified live AWS/state differences requiring reconciliation |
 | KMS key rotation | **Enabled** |
 | Demo stages | **8/8 PASS** |
 
@@ -247,14 +247,15 @@ The dataset is static historical business data. Its use in this project is expli
 
 ## Project Status
 
-**Areas 01–40: COMPLETE / FROZEN**
+**Engineering implementation: Documented**
+**Areas 01–39: Previously marked complete / frozen**
+**Area 40: IN PROGRESS — FINAL ACCEPTANCE NOT GRANTED**
 
-The project has completed engineering implementation, validation, final acceptance and portfolio integration.
+The finalization review identified Terraform refresh-only differences involving live AWS configuration and saved state. These require reconciliation and evidence review. No Terraform apply was performed during this review.
 
-The repository does not claim public-cloud production deployment beyond the explicitly documented AWS development and validation boundary.
+Final acceptance and project freeze remain pending completion of the Area 40 acceptance gates, confirmation of the required technical evidence, and verification of the final repository and portfolio presentation.
 
+The AWS deployment claims remain limited to the resources and validation evidence explicitly documented in this repository. Local Iceberg validation must not be interpreted as proof of AWS-native Iceberg deployment.
 ## Repository
 
 https://github.com/cvsandeep0105-netizen/cloud-native-lakehouse-cdc-platform
-
-
