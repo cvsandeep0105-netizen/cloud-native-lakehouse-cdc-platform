@@ -1,4 +1,4 @@
-# Project 02 Ã¢â‚¬â€ Cloud-Native Lakehouse, CDC & AI-Ready Data Platform on AWS
+# Project 02 — Cloud-Native Lakehouse, CDC & AI-Ready Data Platform on AWS
 
 ## 1. Executive Summary
 
@@ -88,7 +88,7 @@ The Olist source is historical rather than a live production source. AWS DMS, St
 
 ## 19. Final Acceptance
 
-**Status: IN PROGRESS â€” FINAL ACCEPTANCE NOT GRANTED**
+**Status: IN PROGRESS — FINAL ACCEPTANCE NOT GRANTED**
 
 Area 40 remains the final integration, acceptance, and project-freeze stage. The engineering implementation and previously documented Area 01â€“39 results are retained; this status update does not reopen completed engineering areas.
 
