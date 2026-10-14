@@ -1,4 +1,4 @@
-# Project 02 â€” Cloud-Native Lakehouse, CDC & AI-Ready Data Platform on AWS
+# Project 02 Ã¢â‚¬â€ Cloud-Native Lakehouse, CDC & AI-Ready Data Platform on AWS
 
 ## 1. Executive Summary
 
@@ -12,7 +12,7 @@ The platform uses the Olist Brazilian E-Commerce Public Dataset. The historical 
 
 ## 3. Architecture
 
-The platform follows a Raw â†’ Bronze â†’ Silver â†’ Gold lakehouse progression. PostgreSQL provides the operational relational source. Snapshot and CDC boundaries feed immutable/raw processing, Bronze Parquet, Apache Iceberg, Silver incremental processing, and Gold business data products.
+The platform follows a Raw Ã¢â€ â€™ Bronze Ã¢â€ â€™ Silver Ã¢â€ â€™ Gold lakehouse progression. PostgreSQL provides the operational relational source. Snapshot and CDC boundaries feed immutable/raw processing, Bronze Parquet, Apache Iceberg, Silver incremental processing, and Gold business data products.
 
 ## 4. Lakehouse
 
@@ -78,17 +78,19 @@ The authoritative Area 40 evidence index is stored at evidence/area-40-final-evi
 
 ## 17. Area Completion
 
-Areas 01â€“39 are complete and frozen. Area 40 is the final portfolio integration, Engineering Report, acceptance, and project freeze stage.
+Areas 01Ã¢â‚¬â€œ39 are complete and frozen. Area 40 is the final portfolio integration, Engineering Report, acceptance, and project freeze stage.
 
 ## 18. Limitations
 
 The Olist source is historical rather than a live production source. AWS DMS, Step Functions, EventBridge, Secrets Manager, and other candidate services are not claimed as deployed unless directly evidenced. Formal regulatory certification and contractual AWS SLA claims are not made.
 
+**Implementation Freeze: CODE FROZEN; FINAL ACCEPTANCE PENDING**
+
 ## 19. Final Acceptance
 
-**Status: IN PROGRESS — FINAL ACCEPTANCE NOT GRANTED**
+**Status: IN PROGRESS â€” FINAL ACCEPTANCE NOT GRANTED**
 
-Area 40 remains the final integration, acceptance, and project-freeze stage. The engineering implementation and previously documented Area 01–39 results are retained; this status update does not reopen completed engineering areas.
+Area 40 remains the final integration, acceptance, and project-freeze stage. The engineering implementation and previously documented Area 01â€“39 results are retained; this status update does not reopen completed engineering areas.
 
 The following acceptance gates remain open:
 
@@ -103,4 +105,4 @@ The normal Terraform plan previously reported no changes. A subsequent refresh-o
 Project acceptance and freeze will be recorded only after the required gates have been verified and the authoritative Area 40 evidence index has been updated accordingly.
 ---
 
-Project 02 â€” Cloud-Native Lakehouse, CDC & AI-Ready Data Platform on AWS
+Project 02 Ã¢â‚¬â€ Cloud-Native Lakehouse, CDC & AI-Ready Data Platform on AWS
