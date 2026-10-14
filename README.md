@@ -5,7 +5,7 @@
 [![Infrastructure](https://img.shields.io/badge/IaC-Terraform-7B42BC)](https://www.terraform.io/)
 [![Lakehouse](https://img.shields.io/badge/Lakehouse-Apache%20Iceberg-blue)](https://iceberg.apache.org/)
 
-## Project 02 â€” Cloud Data Engineering Platform
+## Project 02 — Cloud Data Engineering Platform
 
 A production-oriented Data Engineering platform demonstrating cloud-native lakehouse architecture, operational PostgreSQL, CDC engineering, incremental processing, data quality, reconciliation, metadata, governance, security, observability, infrastructure as code, CI/CD, and bounded AI-assisted data engineering.
 
@@ -105,7 +105,7 @@ CDC engineering includes deterministic identity handling, ordering, deduplicatio
 The platform validates the following layered model:
 
 ```text
-Raw â†’ Bronze â†’ Iceberg â†’ Silver â†’ Gold
+Raw → Bronze → Iceberg → Silver → Gold
 ```
 
 Local Apache Iceberg validation covers 9/9 datasets, row-count reconciliation, column reconciliation and snapshot presence.
@@ -248,10 +248,10 @@ The dataset is static historical business data. Its use in this project is expli
 ## Project Status
 
 **Engineering implementation: Documented**
-**Areas 01â€“39: Previously marked complete / frozen**
+**Areas 01–39: Previously marked complete / frozen**
 **Implementation Freeze: CODE FROZEN; FINAL ACCEPTANCE PENDING**
 
-**Area 40: IN PROGRESS â€” FINAL ACCEPTANCE NOT GRANTED**
+**Area 40: IN PROGRESS — FINAL ACCEPTANCE NOT GRANTED**
 
 The finalization review identified Terraform refresh-only differences involving live AWS configuration and saved state. These require reconciliation and evidence review. No Terraform apply was performed during this review.
 
