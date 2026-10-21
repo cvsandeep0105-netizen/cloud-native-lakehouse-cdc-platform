@@ -1,4 +1,4 @@
-# Project 02 — Cloud-Native Lakehouse, CDC & AI-Ready Data Platform on AWS
+﻿# Project 02 — Cloud-Native Lakehouse, CDC & AI-Ready Data Platform on AWS
 
 ## 1. Executive Summary
 
@@ -44,7 +44,7 @@ Security engineering covers IAM, least privilege, secrets boundaries, encryption
 
 ## 11. Infrastructure as Code
 
-Terraform manages the AWS infrastructure boundary, including S3, KMS, Glue Catalog, Athena, IAM, and CloudWatch resources. The normal Terraform plan reported no changes at the time of validation. A subsequent refresh-only plan identified differences between live AWS configuration and saved Terraform state, including S3 encryption/versioning and resource tags. These differences remain subject to reconciliation; no Terraform apply was performed as part of this review.
+Terraform manages the AWS infrastructure boundary, including S3, KMS, Glue Catalog, Athena, IAM, and CloudWatch resources. The initial normal plan reported no changes, while a subsequent refresh-only plan identified differences between live AWS configuration and saved Terraform state, including S3 encryption/versioning and resource tags. The reviewed refresh-only plan was applied to local Terraform state only (zero resources added, changed, or destroyed); no AWS infrastructure changes were made. A fresh normal plan then reported no changes and confirmed that infrastructure matches the configuration.
 
 ## 12. CI/CD and Supply Chain
 
@@ -78,7 +78,7 @@ The authoritative Area 40 evidence index is stored at evidence/area-40-final-evi
 
 ## 17. Area Completion
 
-Areas 01â€“39 are complete and frozen. Area 40 is the final portfolio integration, Engineering Report, acceptance, and project freeze stage.
+Engineering work for Areas 01–39 is complete and remains unchanged. Project 02 is still in Area 40; final project acceptance and freeze have not been granted.
 
 ## 18. Limitations
 
@@ -88,17 +88,21 @@ The Olist source is historical rather than a live production source. AWS DMS, St
 
 **Status: IN PROGRESS — FINAL ACCEPTANCE NOT GRANTED**
 
-Area 40 remains the final integration, acceptance, and project-freeze stage. The engineering implementation and previously documented Area 01–39 results are retained; this status update does not reopen completed engineering areas.
+Area 40 remains the final integration, acceptance, and project-freeze stage. The engineering implementation and previously documented Areas 01 through 39 results are retained; this status update does not reopen completed engineering areas.
 
 The following acceptance gates remain open:
 
 1. Reconcile the approved Area 40 requirements against the available evidence.
-2. Determine whether AWS Glue tables are required by the approved project scope. The current audit observed the Glue database but zero Glue tables.
-3. Review the Terraform refresh-only findings involving live AWS configuration and saved state, including S3 encryption/versioning and resource tags. Do not apply changes blindly.
-4. Confirm the README, Markdown report, HTML report, and Area 40 evidence records communicate a consistent acceptance status.
-5. Verify the final GitHub repository presentation and published portfolio report after any explicitly approved publication.
+2. Confirm the README, Markdown report, HTML report, and Area 40 evidence records communicate a consistent acceptance status.
+3. Verify the final GitHub repository presentation and published portfolio report after any explicitly approved publication.
+4. Verify portfolio integration and preservation of Project 01.
+5. Reconcile the authoritative Area 40 evidence index.
+6. Complete the final acceptance review; acceptance and project freeze remain unauthorized until all applicable gates pass.
 
-The normal Terraform plan previously reported no changes. A subsequent refresh-only plan identified differences requiring reconciliation. No Terraform apply was performed during this review, and no AWS infrastructure changes were authorized.
+Resolved during this review:
+- **Glue-table scope:** The approved catalog strategy treats AWS Glue as a planned cloud catalog and does not claim Glue table execution. The Terraform catalog module defines the Glue database and Athena workgroup; no Glue tables were added.
+- **Terraform state reconciliation:** The refresh-only findings were reviewed and the saved plan was applied to local state only. The subsequent normal plan reported no changes; no AWS infrastructure changes were made.
+
 
 Project acceptance and freeze will be recorded only after the required gates have been verified and the authoritative Area 40 evidence index has been updated accordingly.
 ---

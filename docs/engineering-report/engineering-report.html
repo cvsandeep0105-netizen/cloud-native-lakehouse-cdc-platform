@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -254,7 +254,7 @@ PostgreSQL Operational Model
 <tr><td>Athena</td><td>Engine 3 workgroup deployed</td></tr>
 <tr><td>IAM</td><td>Data-platform role and policy deployed</td></tr>
 <tr><td>CloudWatch</td><td>Operational log groups deployed</td></tr>
-<tr><td>Terraform</td><td>Normal plan reported no changes; refresh-only plan identified live-configuration and saved-state differences requiring reconciliation. No apply was performed during this review.</td></tr>
+<tr><td>Terraform</td><td>A refresh-only plan identified differences between live AWS configuration and saved Terraform state. The reviewed refresh-only plan was applied to local Terraform state only (zero resources added, changed, or destroyed); no AWS infrastructure changes were made. A fresh normal plan then reported no changes.</td></tr>
 </table>
 </section>
 
@@ -323,8 +323,23 @@ PostgreSQL Operational Model
 
 <section>
 <h2>Final Acceptance</h2>
-<p>The engineering implementation and recorded validation evidence are documented. Final project acceptance has not been granted; Area 40 acceptance gates remain open.</p>
-<div class="notice"><strong>Engineering implementation:</strong> the implementation and recorded deployment validation are documented in the evidence. Final project acceptance remains pending reconciliation of technical evidence, Terraform findings, repository publication, portfolio integration, and the Area 40 acceptance gates.</div>
+<p><strong>Status: IN PROGRESS — FINAL ACCEPTANCE NOT GRANTED</strong></p>
+<p>Engineering work for Areas 01 through 39 is complete and remains unchanged. Project 02 is still in Area 40; final project acceptance and freeze have not been granted. This status update does not reopen completed engineering areas.</p>
+<p>The following acceptance gates remain open:</p>
+<ol>
+<li>Reconcile the approved Area 40 requirements against the available evidence.</li>
+<li>Confirm the README, Markdown report, HTML report, and Area 40 evidence records communicate a consistent acceptance status.</li>
+<li>Verify the final GitHub repository presentation and published portfolio report after any explicitly approved publication.</li>
+<li>Verify portfolio integration and preservation of Project 01.</li>
+<li>Reconcile the authoritative Area 40 evidence index.</li>
+<li>Complete the final acceptance review; acceptance and project freeze remain unauthorized until all applicable gates pass.</li>
+</ol>
+<p><strong>Resolved during this review:</strong></p>
+<ul>
+<li><strong>Glue-table scope:</strong> AWS Glue is a planned cloud catalog; Glue table execution is not claimed. The Terraform catalog module defines the Glue database and Athena workgroup; no Glue tables were added.</li>
+<li><strong>Terraform state reconciliation:</strong> The reviewed refresh-only plan was applied to local state only. The subsequent normal plan reported no changes; no AWS infrastructure changes were made.</li>
+</ul>
+<p>Project acceptance and freeze will be recorded only after the required gates have been verified and the authoritative Area 40 evidence index has been updated accordingly.</p>
 </section>
 </main>
 
